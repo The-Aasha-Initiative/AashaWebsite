@@ -1,3 +1,8 @@
+.row {  
+    display: flex;
+    flex-wrap: wrap;
+  }
+
 #banner {  
     margin-bottom: 50px;
 }
@@ -169,3 +174,13 @@
 }
 
 /* FOOTER */
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .row {   
+      flex-direction: column;
+    }
+
+    #logo {
+        display: none;
+    }
+}
