@@ -1,7 +1,9 @@
 .row {  
     display: flex;
     flex-wrap: wrap;
-  }
+}
+
+/* TOP BANNER */
 
 #banner {  
     margin-bottom: 50px;
@@ -27,6 +29,10 @@
              0.3em 0.3em 1em rgba(0,0,0,0.3);
 } 
 
+/* TOP BANNER END */
+
+/* BUTTONS, TEXT, BACKGROUND STYLES */
+
 .main-btn {
     color: #fff;
     background-color: #ff0125;
@@ -50,6 +56,18 @@
     border-color: #222;
 } 
 
+.aasha-red-bg {
+    background-color: #ff0125;
+}
+
+.aasha-red-text {
+    color: #ff0125;
+}
+
+/* BUTTONS, TEXT, BACKGROUND STYLES END */
+
+/* FEED */
+
 .navbar{
     margin-bottom: 10px;
     background-color: #d6dce1 !important;
@@ -63,14 +81,9 @@
     padding: 0 6px;
 }
  
-#feed {
-    height: 100%;
-}
-
 .feedposts {
     margin-bottom: 50px;
 }
-
 
 .feed-image {
     width: 100%;
@@ -78,14 +91,6 @@
     margin-bottom: 10px;
     border: none;
     padding: 0;
-}
-
-.aasha-red-bg {
-    background-color: #ff0125;
-}
-
-.aasha-red-text {
-    color: #ff0125;
 }
 
 .blog-text {
@@ -97,6 +102,8 @@
     color: #4b4c4d;
     margin: 5px 0 5px;
 }
+
+/* FEED END */
 
 /* FOOTER */
 
@@ -173,7 +180,9 @@
     margin-bottom:0;
 }
 
-/* FOOTER */
+/* FOOTER END */
+
+/* CHANGE LAYOUT FOR MOBILE DEVICES */
 
 @media (min-width: 320px) and (max-width: 768px) {
     .row {   
@@ -184,3 +193,5 @@
         display: none;
     }
 }
+
+/* CHANGE LAYOUT FOR MOBILE DEVICES END */
