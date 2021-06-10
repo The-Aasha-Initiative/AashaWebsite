@@ -30,6 +30,14 @@
              0.3em 0.3em 1em rgba(0,0,0,0.3);
 } 
 
+.navbar {
+    font-size: 1.14em;
+    width: 46%;
+    margin-left: auto; 
+    margin-right: 0;
+    right: 1%; 
+}
+
 /* TOP BANNER END */
 
 /* BUTTONS, TEXT, BACKGROUND STYLES */
@@ -186,8 +194,13 @@
 /* CHANGE LAYOUT FOR MOBILE DEVICES */
 
 @media (min-width: 320px) and (max-width: 768px) {
+    
     .row {   
       flex-direction: column;
+    }
+
+    .navbar {
+        display: none;
     }
 }
 
