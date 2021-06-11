@@ -190,7 +190,11 @@
 }
 
 /* FOOTER END */
-
+#blog-banner
+{
+    background-size: cover;
+    
+}
 /* CHANGE LAYOUT FOR MOBILE DEVICES */
 
 @media (min-width: 320px) and (max-width: 768px) {
