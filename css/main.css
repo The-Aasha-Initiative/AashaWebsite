@@ -226,9 +226,33 @@
       flex-direction: column;
     }
 
-    .navbar {
+    #pc-nav {
         display: none;
     }
+
+    #mobile-nav {
+        display: block;
+        margin-bottom: 2em;
+    }
+
+    #mobile-nav > .navbar {
+        width: 100%;
+        right: 0;
+        left: 0;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .row {   
+        flex-direction: row;
+      }
+    
+    #mobile-nav {
+        display: none;
+    }  
+      
 }
 
 /* CHANGE LAYOUT FOR MOBILE DEVICES END */
