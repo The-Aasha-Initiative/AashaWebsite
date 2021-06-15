@@ -198,14 +198,25 @@
 #blog-banner
 {
     background-size: cover;
+    width: 100%;
     
 }
 
 #blognav {
     width: 100%;
-    margin-right: 0;
+    right: 0%;
+    padding: 0% 20%;
+    background-color: #fff !important;   
 }
 
+#blognav > .nav-link {
+    padding: 0.5rem 2rem !important;
+}
+ 
+.navbar-border {
+    border-bottom: 0.1em solid rgba(34, 34, 34, 0.11) !important;
+    width: 11%;    
+}
 
 /* CHANGE LAYOUT FOR MOBILE DEVICES */
 
