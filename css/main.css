@@ -214,9 +214,60 @@
 }
  
 .navbar-border {
-    border-bottom: 0.1em solid rgba(34, 34, 34, 0.11) !important;
+    border-bottom: 0.1em solid rgba(58, 44, 44, 0.11) !important;
     width: 11%;    
 }
+
+/* blogs.html PAGE */
+
+.grid-container1 {
+    display: grid;
+    width: 60%;
+    margin: auto;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    margin: 12% auto;
+}
+
+.grid-container1 > .grid-item > img { 
+    display: block;
+    object-fit: fill;
+    max-width: 100%;
+    flex: 1;
+    min-height: 100%;
+    border: 0.5px solid #858585;
+}
+
+.grid-item {
+    position: relative;
+}
+
+.grid-item > .img-text {
+        position: absolute;
+        z-index: 999;
+        margin: 0 auto;
+        left: 0;
+        right: 0;        
+        text-align: left;
+        top: 90%; /* Adjust this value to move the positioned div up and down */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+        font-family: Arial,sans-serif;
+        color: #fff;
+        width: 100%; /* Set the width of the positioned div */
+}
+
+.grid-item-1 {
+    grid-column: 1 / span 2;
+}
+  
+.grid-item-4 {
+    grid-column: 2 / span 2;
+}
+
+/* blogs.html PAGE END */
 
 /* CHANGE LAYOUT FOR MOBILE DEVICES */
 
