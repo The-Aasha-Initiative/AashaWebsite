@@ -225,25 +225,28 @@
     width: 60%;
     margin: auto;
     grid-template-columns: repeat(3, 1fr);
-    gap: 6px;
+    gap: 12px;
     margin: 12% auto;
 }
 
-.grid-container1 > .grid-item > img { 
+.grid-item > img { 
     display: block;
     object-fit: fill;
     max-width: 100%;
     flex: 1;
     min-height: 100%;
+}
+
+.blogs-img-border {
     border: 0.5px solid #858585;
 }
 
-.grid-item {
+.grid-container1 > .grid-item {
     position: relative;
     font-size: calc(1.3rem + 0.6vw);
 }
 
-.grid-item > .big-img-content {
+.grid-container1 > .grid-item > .big-img-content {
     position: absolute; /* Position the background text */
     bottom: 0; /* At the bottom. Use top:0 to append it to the top */
     display: flex;
@@ -276,7 +279,7 @@
     height: 100%;
 }
 
-.grid-item > .small-img-content {
+.grid-container1 > .grid-item > .small-img-content {
     position: absolute; /* Position the background text */
     bottom: 0; /* At the bottom. Use top:0 to append it to the top */
     display: flex;
@@ -309,20 +312,46 @@
     height: 100%;
 }
 
-.grid-item-1 {
+.grid-container1 > .grid-item-1 {
     grid-column: 1 / span 2;
 }
   
-.grid-item-4 {
+.grid-container1 > .grid-item-4 {
     grid-column: 2 / span 2;
 }
 
 @media (min-width: 768px) and (max-width: 1178px) {
 
-    .grid-item > h3{
+    .grid-container1 > .grid-item > h3{
         font-size: calc(1.3rem + 0.3vw);
     }
     
+}
+
+.grid-container2 {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%; 
+    width: 60%;
+    gap: 21px;
+    margin: 12% auto;   
+}
+
+.grid-container2 > .grid-item {
+    margin-top: 30px;
+}
+
+.blogs-text {
+    padding-top: 15px;
+}
+
+.blogs-sub-header {
+    font-size: 18px;
+    color: rgba(0,0,0,.54);
+    fill: rgba(0,0,0,.54);
+}
+
+.blogs-author {
+
 }
 
 /* blogs.html PAGE END */
