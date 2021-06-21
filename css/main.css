@@ -240,11 +240,15 @@
 
 .grid-item {
     position: relative;
+    font-size: calc(1.3rem + 0.6vw);
 }
 
 .grid-item > .big-img-content {
     position: absolute; /* Position the background text */
     bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+    display: flex;
+    align-items: center;
+    padding: 5% 15% 5% 5%;
     background: rgb(0, 0, 0); /* Fallback color */
     background: linear-gradient(
     to bottom,
@@ -268,7 +272,6 @@
     color: #fff; 
     text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
     width: 100%; 
-    padding: 30% 35% 4% 10%; 
     margin: 0;
     height: 100%;
 }
@@ -276,6 +279,9 @@
 .grid-item > .small-img-content {
     position: absolute; /* Position the background text */
     bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+    display: flex;
+    align-items: center;
+    padding: 5% 15% 5% 5%;
     background: rgb(0, 0, 0); /* Fallback color */
     background: linear-gradient(
     to bottom,
@@ -299,7 +305,6 @@
     color: #fff; 
     text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
     width: 100%; 
-    padding: 52% 20% 4% 10%; 
     margin: 0;
     height: 100%;
 }
@@ -310,6 +315,14 @@
   
 .grid-item-4 {
     grid-column: 2 / span 2;
+}
+
+@media (min-width: 768px) and (max-width: 1178px) {
+
+    .grid-item > h3{
+        font-size: calc(1.3rem + 0.3vw);
+    }
+    
 }
 
 /* blogs.html PAGE END */
