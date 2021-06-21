@@ -195,18 +195,22 @@
 
 /* BLOG PAGE */
 
+.cfblogs {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 #blog-banner
 {
     background-size: cover;
-    width: 100%;
-    
+    width: 100%;   
 }
 
 #blognav {
     width: 100%;
     right: 0%;
-    padding: 0% 20%;
-    background-color: #fff !important;   
+    padding: 0% 0%;
+    background-color: rgb(255, 255, 255) !important;   
 }
 
 #blognav > .nav-link {
@@ -217,6 +221,7 @@
     border-bottom: 0.1em solid rgba(58, 44, 44, 0.11) !important;
     width: 11%;    
 }
+
 
 /* blogs.html PAGE */
 
