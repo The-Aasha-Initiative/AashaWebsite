@@ -222,9 +222,6 @@
     width: 11%;    
 }
 
-
-/* blogs.html PAGE */
-
 .grid-container1 {
     display: grid;
     width: 60%;
@@ -356,10 +353,26 @@
 }
 
 .blogs-author {
-
+    padding-top: 5px;
 }
 
-/* blogs.html PAGE END */
+.author-name {
+    text-decoration: none;
+    color: #599297;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.date-readtime {
+    color: rgba(0,0,0,.54);
+    fill: rgba(0,0,0,.54);    
+}
+
+.grid-container2 > .grid-item > img { 
+    height:265px;
+    width:100%;
+}
+/* BLOG PAGE END */
 
 /* CHANGE LAYOUT FOR MOBILE DEVICES */
 
