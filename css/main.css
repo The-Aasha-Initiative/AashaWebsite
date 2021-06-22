@@ -209,12 +209,18 @@
 #blognav {
     width: 100%;
     right: 0%;
+<<<<<<< Updated upstream
     padding: 0% 0%;
     background-color: rgb(255, 255, 255) !important;   
+=======
+    /* padding: 0%; */
+    background-color: #fff !important;   
+>>>>>>> Stashed changes
 }
 
 #blognav > .nav-link {
     padding: 0.5rem 2rem !important;
+
 }
  
 .navbar-border {

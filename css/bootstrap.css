@@ -566,6 +566,30 @@ progress {
   height: auto;
 }
 
+.dg.ac {
+z-index: 2;
+}
+canvas  {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#message {
+  color: #e2e2de;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 2px;
+  position: fixed;
+  top: 50%;
+  z-index: 0;
+  width: 100%;
+  margin-top: -0.5em;
+  text-shadow: 0 -1px 0 #d3d3d1;
+}
+
+
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #fff;
@@ -3833,6 +3857,7 @@ textarea.form-control-lg {
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
+
 @media (prefers-reduced-motion: reduce) {
   .nav-link {
     transition: none;
