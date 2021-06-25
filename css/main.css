@@ -209,13 +209,8 @@
 #blognav {
     width: 100%;
     right: 0%;
-<<<<<<< Updated upstream
-    padding: 0% 0%;
-    background-color: rgb(255, 255, 255) !important;   
-=======
     /* padding: 0%; */
     background-color: #fff !important;   
->>>>>>> Stashed changes
 }
 
 #blognav > .nav-link {
@@ -285,6 +280,10 @@
     width: 100%; 
     margin: 0;
     height: 100%;
+}
+
+.grid-item > a {
+        
 }
 
 .grid-container1 > .grid-item > .small-img-content {
@@ -418,3 +417,4 @@
 }
 
 /* CHANGE LAYOUT FOR MOBILE DEVICES END */
+
