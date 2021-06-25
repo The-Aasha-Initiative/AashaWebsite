@@ -228,7 +228,7 @@
     width: 60%;
     margin: auto;
     grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
+    gap: 15px;
     margin: 12% auto;
 }
 
@@ -247,6 +247,11 @@
 .grid-container1 > .grid-item {
     position: relative;
     font-size: calc(1.3rem + 0.6vw);
+}
+
+.grid-container1 > .grid-item > img { 
+    height:450px;
+    width:100%;
 }
 
 .grid-container1 > .grid-item > .big-img-content {
@@ -377,6 +382,7 @@
     height:265px;
     width:100%;
 }
+
 /* BLOG PAGE END */
 
 /* CHANGE LAYOUT FOR MOBILE DEVICES */
