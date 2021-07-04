@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Aasha Initiative</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js" charset="utf-8"></script>    
+    <script type="text/babel">
+    class App extends React.Component {
+        render() {
+            let x = document.getElementsByClassName('grid-item-2');
+            let y = document.getElementsByClassName('grid-item-1');
+            if(x) {
+                return <h2>2nd Blog</h2>
+            }
+            if(y){
+                return <h2>First Blog</h2>
+            }
+        }
+    }   
+    ReactDOM.render(
+        <App/>,
+        document.getElementById('singleblog')
+    );
+    </script>
+</head>
+<body>
+    
+    <img id="blog-banner" src="images/com_ban.png">
+
+    <!-- https://cdn-images-1.medium.com/max/1400/1*3V4uBDggNandlR2wqrQIDA.jpeg -->
+
+    <div class="container-fluid" >
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="blognav">
+            
+                <!-- <a class="navbar-brand" href="#">Aasha</a> -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse navbar-border" id="navbarNavAltMarkup">
+                    <div class="navbar-nav mx-auto">
+                        <a class="nav-link" style="padding-right: 5em;" aria-current="page" href="index.html">HOME</a>
+                        <a class="nav-link" style="padding-right: 5em;" aria-current="page" href="#">SPORTS</a>
+                        <a class="nav-link" style="padding-right: 5em;" href="#">COVID</a>
+                        <a class="nav-link" style="padding-right: 5em;" href="#">CULTURE</a>
+                        <a class="nav-link" style="padding-right: 5em;" href="#">LGBTQ+</a>
+                        <a class="nav-link" style="padding-right: 5em;" href="#">WOMEN</a>
+                        <a class="nav-link" style="padding-right: 5em;" href="#">POLITICS</a>
+                    </div>
+                </div>
+        </nav>
+
+        <div id="singleblog">
+            <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et fugiat qui sit.</p>
+
+            <div id="authorinfo">
+                <div id="name">
+                    <h6>Memento</h6>
+                </div>
+                <div id="socials" class="social-media" [ngClass]="{'vertical':vertical}">
+                    
+                        <div *ngIf="twitter" class="social-media-icon">
+                            <a [href]="twitterLink + twitter.link" target="_blank" rel="noopener" title="view {{ twitter.user }} on twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                        <div *ngIf="linkedIn" class="social-media-icon">
+                            <a *ngIf="linkedIn.company; else altLinkedIn" [href]="linkedInLinkCompany + linkedIn.link" target="_blank" rel="noopener" title="view {{ linkedIn.user }} on twitter"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                        <div *ngIf="facebook" class="social-media-icon">
+                            <a [href]="facebookLink + facebook.link" target="_blank" rel="noopener" title="view {{ facebook.user }} on facebook"><i class="fab fa-facebook-square"></i></a>
+                        </div> 
+                        <!-- <div *ngIf="medium" class="social-media-icon">
+                            <a [href]="mediumLink + medium.link" target="_blank" rel="noopener" title="view {{ medium.user }} on medium"><i class="fab fa-instagram"></i></a>
+                        </div> -->
+                </div>
+            </div>
+            <div id="blogcover" class="margin-top-ten">
+                <img src="src/assets/images/cover.png" alt="">
+            </div>
+            <div class="article margin-top-ten">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto alias illo repellendus quo esse placeat totam corrupti deserunt ipsum doloribus ea earum sit exercitationem voluptatum accusantium molestias, dicta commodi vero! Totam, voluptatibus numquam illum odit recusandae vero? Iusto placeat, quis dignissimos, maxime sit temporibus tempora dicta iure numquam dolorum minima doloremque asperiores quasi quos natus unde harum ullam totam laudantium, optio officia ad id modi sunt? Ipsa maxime impedit nesciunt praesentium libero, assumenda modi soluta dolores maiores similique quod sed quo! Ut ducimus dolores officiis omnis eius est dicta voluptatum vitae similique aperiam quasi aliquam ab, nihil quo molestiae maiores excepturi architecto quod molestias ipsa porro error totam suscipit earum! Accusamus, dolore ducimus totam repellendus accusantium blanditiis, distinctio voluptas eos deleniti molestiae eius perspiciatis. Perspiciatis accusantium ratione a assumenda eum rem autem facilis et. A sit ad, sed ullam, omnis id perferendis fuga eveniet dolor magnam soluta. Tenetur maiores distinctio numquam, natus porro fuga odio velit, illum exercitationem sed optio ipsam labore voluptatibus, quos ut. Quaerat asperiores modi debitis magni consequuntur iusto veritatis odio dolorem facilis mollitia, corporis voluptatum, explicabo temporibus nemo fuga voluptatibus inventore non dignissimos sint reiciendis iste ad enim? Molestiae quis, architecto est illo odit inventore error aliquam iure cum ab odio atque eos similique ad quisquam provident quos exercitationem ea minus consequatur, animi praesentium magni, cupiditate aperiam. Cumque dignissimos nemo ipsum eos velit et reprehenderit illum. Ullam blanditiis maxime tempora vero explicabo, expedita temporibus ipsam nulla? Facere dicta molestias tempore ipsa sequi quibusdam aut pariatur nihil, impedit quae odio recusandae a repudiandae perspiciatis natus commodi dolorum alias harum eaque? Est voluptates labore facere autem voluptate fugiat totam quae natus repudiandae praesentium. Nemo incidunt qui mollitia at pariatur veniam voluptates eveniet eos explicabo aspernatur, facilis, illum similique accusantium doloremque facere aliquid quia quas quisquam libero suscipit eaque sunt officia nihil? Fugiat consequatur quasi, odio rem obcaecati, asperiores qui voluptas soluta ut nam ducimus aut magni dolor culpa maiores cumque porro nesciunt corporis ea earum ratione? Magnam, enim at. Excepturi mollitia quo sapiente quidem voluptatum, atque commodi eveniet suscipit aliquid ut odio architecto soluta! Fugiat consequatur, esse ex expedita, vero iste doloribus corporis sit at quaerat distinctio. Laborum qui aperiam esse dignissimos quae ut itaque aliquam cumque eos distinctio veniam unde mollitia libero provident, modi commodi. Magni culpa, molestias quaerat nesciunt, ducimus omnis eligendi blanditiis est illo delectus iure, ipsa ex quas facere. Distinctio, commodi enim? Inventore cum debitis perspiciatis quo exercitationem error aspernatur, totam animi neque unde. Ex nulla, quasi architecto ad excepturi reprehenderit, obcaecati velit veritatis repudiandae molestiae quaerat consequatur impedit est, iusto cum enim laborum tempore nesciunt! Ipsum repellendus nostrum molestiae repudiandae incidunt beatae voluptates, voluptatum cum nemo atque illum sequi fugit obcaecati modi explicabo, esse fugiat sunt doloribus, sed dolores alias eos. Aperiam natus libero recusandae, nobis tenetur veritatis ducimus. Tempora saepe modi officiis voluptates ullam eligendi deserunt quia, illo error magnam animi expedita eos voluptatem, at rerum perferendis quaerat aperiam ut debitis neque ratione harum! Commodi numquam delectus deleniti aut hic sed dolore, modi praesentium dolor, natus impedit placeat officiis! Voluptate veniam voluptatem eius pariatur molestiae, consequatur laborum perspiciatis sunt dolor nobis. Quis dolores adipisci quia iusto eos molestias consectetur, dolorum delectus beatae, deserunt officiis unde, eius impedit suscipit. Fuga vitae ullam nulla modi deserunt corrupti dolorum quaerat beatae voluptatum eaque, sequi autem rem, laborum, reiciendis quisquam et. Culpa aliquid numquam facere nisi vel cumque. Porro qui molestias unde expedita fugiat, vero earum deserunt atque cumque eius inventore assumenda, sed perspiciatis! Nam laborum ad quia facere illo officia libero totam porro! Aspernatur fugiat quam est magnam totam dignissimos culpa similique iste pariatur architecto aut repellendus sed iure veritatis eaque quisquam excepturi eligendi, ad odio reprehenderit exercitationem veniam! Sit quam dolore aliquid voluptatum aspernatur ducimus sed eveniet amet officia necessitatibus molestiae quasi quia neque iusto rerum, omnis ab unde exercitationem facere repellat ipsam in. Animi et ad mollitia blanditiis optio repellendus ea veritatis veniam cum nostrum, fuga cumque quidem! Magni sed hic veniam voluptatum nostrum a minima eveniet. Iusto accusamus, nisi, impedit ea aperiam quo voluptate optio officiis eius dolorum quaerat id sunt maiores eaque delectus error fuga nulla. Assumenda vel doloremque eaque minus reprehenderit, id, adipisci atque excepturi tempore harum neque quibusdam temporibus. Aliquam molestias velit aspernatur a vel quo vitae quas unde quos molestiae beatae cumque odio assumenda porro officia facere voluptatem, nemo ipsam praesentium harum accusamus odit. Id et labore consequuntur vero tempora distinctio nemo, dolore quo laudantium quasi natus hic fuga, cumque omnis iure esse repellendus ea magnam accusantium architecto! Temporibus excepturi hic omnis delectus reiciendis iure odit nemo porro quod laboriosam! Dicta hic voluptatum voluptas quo! Dolore facere possimus pariatur, inventore cum perspiciatis enim esse illum autem! Harum iure cum, maxime, sunt quis facilis necessitatibus architecto dolor assumenda quidem voluptas ipsum, est sit! Sunt voluptate, quae laudantium accusamus sint excepturi nemo blanditiis aliquam quia soluta, error adipisci corrupti ad velit recusandae id iusto quasi qui dolorem illo officiis nisi. Labore, corrupti? Id, numquam sint? Perferendis reiciendis repellat rem voluptas ea laudantium sequi architecto quisquam ipsa praesentium, error in repudiandae voluptates quae possimus ab neque corporis exercitationem veniam magnam odio sint. Ad ex eligendi quidem modi debitis voluptatibus, tenetur nam fugit delectus harum perspiciatis repellendus quaerat obcaecati veniam a repudiandae nisi recusandae ab beatae non voluptas asperiores natus! Deserunt voluptate esse nesciunt. Sequi laboriosam iusto eligendi deleniti ratione fugit nemo neque consequuntur voluptates qui laborum accusantium harum dolores, magni ipsa!</p>
+            </div>
+        </div>
+
+        
+
+    </div>
+
+    <div id="footer" style="position: relative; z-index: 9;">
+        <img src="images/coverfooter.jpg" class="img-fluid" id="footerbanner" alt="...">  
+    </div>
+
+    <div class="footer-basic" style="position: relative; z-index: 9;">
+        <footer>
+            <ul class="list-inline">
+                <li class="list-inline-item fw-bold fs-4">Reach Us</li>
+            </ul>
+            
+            <div class="social">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/the-aasha-initiative/"><i class="fab fa-linkedin"></i></a>
+                <!-- <a href="#"><i class="icon ion-social-twitter"></i></a>
+                <a href="#"><i class="icon ion-social-facebook"></i></a></div> -->
+            
+            <p class="copyright">The Aasha Initiative © 2021</p>
+        </footer>
+    </div>
+</body>
+</html>        
