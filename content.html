@@ -12,22 +12,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js" charset="utf-8"></script>    
     <script type="text/babel">
-    class App extends React.Component {
+    class Content extends React.Component {
         render() {
-            let x = document.getElementsByClassName('grid-item-2');
+            //let x = document.getElementsByClassName('grid-item-2');
             let y = document.getElementsByClassName('grid-item-1');
-            if(x) {
-                return <h2>2nd Blog</h2>
+            if(y) {
+                return ( <React.Fragment><h2>2nd Blog</h2> </React.Fragment>);
             }
-            if(y){
-                return <h2>First Blog</h2>
-            }
+            //if(y){
+               // return <h2>First Blog</h2>
+            //}
         }
-    }   
-    ReactDOM.render(
-        <App/>,
-        document.getElementById('singleblog')
-    );
+    }
+    export default Content;  
     </script>
 </head>
 <body>

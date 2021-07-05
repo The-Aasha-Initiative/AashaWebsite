@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fontawesome.css">
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js" charset="utf-8"></script>    
 </head>
 <body>
 
@@ -38,19 +40,29 @@
         </nav>
        
         <div class="grid-container1" id="grid-container1">
-            <div class="grid-item grid-item-1" id="gi1">
-                <!-- <a href="vinati.html"></a> -->
-                <img class="blogs-img-border" src="images/blog11.jpg">
-                <a class="big-img-content" href="content.html"><h3 >Lorem ipsum dolor sit amet consectetur.</h3>
-                    <!-- <script>
-                        function myFunction() {
-                          document.getElementsByClassName("grid-item-1").href = "content.html";
-
-                        }
-                    </script> -->
-                </a>
-            </div>
-            <div class="grid-item grid-item-2" id="gi2">
+            
+                <script type="text/babel">
+                class Blogs extends React.Component
+                {
+                    myfunction= () =>
+                    {
+                        return <Redirect  to="/content/" />;
+                    }
+                    render()
+                    {
+                        return(
+                            <React.Fragment>
+                            <div class="grid-item grid-item-1">
+                                <img class="blogs-img-border" src="images/blog11.jpg"/>
+                                <Link class="big-img-content" to="content.html" onClick={this.myfunction}><h3 >Lorem ipsum dolor sit amet consectetur.</h3></Link>
+                            </div>
+                            </React.Fragment>
+                        )
+                    }
+                }
+                export default Blogs;
+                </script>
+            <div class="grid-item grid-item-2">
                 <img class="blogs-img-border" src="images/blog12.png">
                 <a  class="small-img-content" href="content.html"><h3">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3></a>
             </div>
