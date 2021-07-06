@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fontawesome.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js" charset="utf-8"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js" charset="utf-8"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js" charset="utf-8"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js" charset="utf-8"></script>     -->
 </head>
 <body>
 
@@ -38,43 +38,55 @@
                 </div>
             
         </nav>
-       
-        <div class="grid-container1" id="grid-container1">
-            
-                <script type="text/babel">
-                class Blogs extends React.Component
-                {
-                    myfunction= () =>
+        
+            <div class="grid-container1" id="grid-container1">
+                <!-- <div >
+
+                </div> -->
+                <div class="grid-item grid-item-1" >
+                    <img class="blogs-img-border" src="images/blog11.jpg"/>
+                   
+                    <a id="reactcomp" class="big-img-content" href="content.html"></a>
+                
+                </div>
+                <!-- <script type="text/javascript">
+                    var x = document.getElementById("reactcomp").value;
+                    x.textContent = "Hello!!!"
+                    localStorage.y = x;
+                </script> -->
+                    <!-- <script type="text/babel">
+                    import React from 'react';
+                    class Blogs extends React.Component
                     {
-                        return <Redirect  to="/content/" />;
+                        myfunction= () =>
+                        {
+                            return <Redirect  to="/content/" />;
+                        }
+                        render()
+                        {
+                            return (
+                                <React.Fragment>
+                                
+                                </React.Fragment>
+                            )
+                        }
                     }
-                    render()
-                    {
-                        return(
-                            <React.Fragment>
-                            <div class="grid-item grid-item-1">
-                                <img class="blogs-img-border" src="images/blog11.jpg"/>
-                                <Link class="big-img-content" to="content.html" onClick={this.myfunction}><h3 >Lorem ipsum dolor sit amet consectetur.</h3></Link>
-                            </div>
-                            </React.Fragment>
-                        )
-                    }
-                }
-                export default Blogs;
-                </script>
-            <div class="grid-item grid-item-2">
-                <img class="blogs-img-border" src="images/blog12.png">
-                <a  class="small-img-content" href="content.html"><h3">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3></a>
+                    export default Blogs;
+                    </script> -->
+                <div class="grid-item grid-item-2">
+                    <img class="blogs-img-border" src="images/blog12.png">
+                    <a  class="small-img-content" href="content.html"><h3">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3></a>
+                </div>
+                <div class="grid-item grid-item-3">
+                    <img class="blogs-img-border" src="images/blog13.jpg">
+                    <h3 class="small-img-content">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3>
+                </div>
+                <div class="grid-item grid-item-4">
+                    <img class="blogs-img-border" src="images/blog14.jpg">
+                    <h3 class="big-img-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, consectetur.</h3>
+                </div>
             </div>
-            <div class="grid-item grid-item-3">
-                <img class="blogs-img-border" src="images/blog13.jpg">
-                <h3 class="small-img-content">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3>
-            </div>
-            <div class="grid-item grid-item-4">
-                <img class="blogs-img-border" src="images/blog14.jpg">
-                <h3 class="big-img-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, consectetur.</h3>
-            </div>
-        </div>
+        </form>
 
         <div class="grid-container2">
 
@@ -163,6 +175,15 @@
         </div>
 
     </div>
+
+    <!-- Load React. -->
+        <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- Load our React component. -->
+    <script src="reactcomp.js"></script>
+
 </body>
 </html>
 
