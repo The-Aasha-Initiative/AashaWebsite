@@ -5,105 +5,87 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Aasha Initiative</title>
+    <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico"/>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fontawesome.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        
-        
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js" charset="utf-8"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js" charset="utf-8"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js" charset="utf-8"></script>     -->
+    
 </head>
 <body>
 
     <img id="blog-banner" src="images/com_ban.png">
 
-    <!-- https://cdn-images-1.medium.com/max/1400/1*3V4uBDggNandlR2wqrQIDA.jpeg -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="blog-nav">
+            
+        <!-- <a class="navbar-brand" href="#">Aasha</a> -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse navbar-border" id="navbarNavAltMarkup">
+            <div class="navbar-nav mx-auto">
+                <a class="nav-link"  aria-current="page" href="index.html">HOME</a>
+                <a class="nav-link" href="#">COVID</a>
+                <a class="nav-link" href="#">CULTURE</a>
+                <a class="nav-link" href="#">LGBTQ+</a>
+                <a class="nav-link" href="#">WOMEN</a>
+                <a class="nav-link" href="#">POLITICS</a>
+            </div>
+        </div>
+    
+    </nav>  
 
     <div class="container-fluid">
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="blognav">
-            
-                <!-- <a class="navbar-brand" href="#">Aasha</a> -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse navbar-border" id="navbarNavAltMarkup">
-                    <div class="navbar-nav mx-auto">
-                        <a class="nav-link" style="padding-right: 5em;" aria-current="page" href="index.html">Home</a>
-                        <a class="nav-link" style="padding-right: 5em;" href="#">COVID</a>
-                        <a class="nav-link" style="padding-right: 5em;" href="#">CULTURE</a>
-                        <a class="nav-link" style="padding-right: 5em;" href="#">LGBTQ+</a>
-                        <a class="nav-link" style="padding-right: 5em;" href="#">WOMEN</a>
-                        <a class="nav-link" style="padding-right: 5em;" href="#">POLITICS</a>
-                    </div>
-                </div>
-            
-        </nav>
-        
-            <div class="grid-container1" id="grid-container1">
-                <!-- <div >
+        <div class="blog-header-image">
 
-                </div> -->
-                <div class="grid-item grid-item-1">
-                    <img class="blogs-img-border" src="images/blog11.jpg"/>
-                   
-                    <a id="reactcomp" class="big-img-content" href="content.html#b1"></a>
+        </div>
+
+        <div class="grid-container1" id="grid-container1">
                 
-                </div>
-                <!-- <script type="text/javascript">
-                    var x = document.getElementById("reactcomp").value;
-                    x.textContent = "Hello!!!"
-                    localStorage.y = x;
-                </script> -->
-                    <!-- <script type="text/babel">
-                    import React from 'react';
-                    class Blogs extends React.Component
-                    {
-                        myfunction= () =>
-                        {
-                            return <Redirect  to="/content/" />;
-                        }
-                        render()
-                        {
-                            return (
-                                <React.Fragment>
-                                
-                                </React.Fragment>
-                            )
-                        }
-                    }
-                    export default Blogs;
-                    </script> -->
-                <div class="grid-item grid-item-2">
-                    <img class="blogs-img-border" src="images/blog12.png">
-                    <a  class="small-img-content" href="content.html#b2"><h3>What happens after you decide you need help?</h3></a>
-                </div>
-                <div class="grid-item grid-item-3">
-                    <img class="blogs-img-border" src="images/blog13.jpg">
-                    <a  class="small-img-content" href="content.html#b3"><h3>Anxious Partner? Here’s how you can save your relationship from anxiety</h3></a>
-                </div>
-                <div class="grid-item grid-item-4">
-                    <img class="blogs-img-border" src="images/blog14.jpg">
-                    <h3 class="big-img-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, consectetur.</h3>
-                </div>
+            <div class="grid-item grid-item-1">
+                <img class="blogs-img-border" src="images/blog11.jpg"/>
+                <a id="reactcomp" class="big-img-content" href="content.html#b1"></a>
             </div>
-        </form>
+                
+            <div class="grid-item grid-item-2">
+                <img class="blogs-img-border" src="images/blog12.png">
+                <a  class="small-img-content" href="content.html#b2"><h3>What happens after you decide you need help?</h3></a>
+            </div>
 
-        <div class="grid-container2">
+            <div class="grid-item grid-item-3">
+                <img class="blogs-img-border" src="images/blog13.jpg">
+                <a  class="small-img-content" href="content.html#b3"><h3>Anxious Partner? Here’s how you can save your relationship from anxiety</h3></a>
+            </div>
+
+            <div class="grid-item grid-item-4">
+                <img class="blogs-img-border" src="images/blog14.jpg">
+                 <h3 class="big-img-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, consectetur.</h3>
+             </div>
+
+        </div>
+
+        <div class="blog-header-image">
+
+        </div>
+       
+
+        <div class="grid-container-2">
 
             <div class="grid-item grid-item-1">
                 
                 <img class="blogs-img-border" src="images/blog21.jpg" alt="">
+
                 <div class="blogs-text">
                     <h3 class="blogs-header">Lorem ipsum dolor sit amet.</h3>
                     <div class="blogs-sub-header">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, sint deserunt.</div>
                 </div>
+
                 <div class="blogs-author">
                     <a class="author-name" href="">Memento</a>
                     <div class="date-readtime">June 20th &#8226; 4 min read</div>
                 </div>
+
             </div>
             
             <div class="grid-item grid-item-2">
@@ -112,12 +94,16 @@
                 
                 <div class="blogs-text">
                     <h3 class="blogs-header">Lorem ipsum dolor sit amet.</h3>
+
                     <div class="blogs-sub-header">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, sint deserunt.</div>
+
                     <div class="blogs-author">
                         <a class="author-name" href="">Memento</a>
                         <div class="date-readtime">June 20th &#8226; 4 min read</div>
                     </div>
+
                 </div>
+
             </div>
 
             <div class="grid-item grid-item-3">
@@ -179,6 +165,26 @@
 
     </div>
 
+    <div id="footer" style="position: relative; z-index: 9;">
+        <img src="images/coverfooter.jpg" class="img-fluid" id="footerbanner" alt="...">  
+    </div>
+
+    <div class="footer-basic" style="position: relative; z-index: 9;">
+        <footer>
+            <ul class="list-inline">
+                <li class="list-inline-item fw-bold fs-4">Reach Us</li>
+            </ul>
+            
+            <div class="social">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/the-aasha-initiative/"><i class="fab fa-linkedin"></i></a>
+                <!-- <a href="#"><i class="icon ion-social-twitter"></i></a>
+                <a href="#"><i class="icon ion-social-facebook"></i></a></div> -->
+            
+            <p class="copyright">The Aasha Initiative © 2021</p>
+        </footer>
+    </div>
+
     <!-- Load React. -->
         <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
@@ -189,24 +195,3 @@
 
 </body>
 </html>
-
-<!--<div class="collectionHeader-aspectRatioContent u-backgroundSizeCover js-collectionHeaderBackground" style="background-image: url(&quot;https://cdn-images-1.medium.com/max/1400/1*3V4uBDggNandlR2wqrQIDA.jpeg&quot;); background-position: 46.07142857142857% 23.300970873786408% !important;">
-    <div class="collectionHeader-overlayBackground u-height100vh"></div>
-    <header class="collectionHeader-heroAndInlineNav u-borderBox u-maxWidth1072 u-paddingLeft20 u-paddingRight20 u-marginAuto u-foreground js-collectionHeader">
-        <div class="collectionHeader-hero js-collectionHeaderHero u-clearfix u-imageSpectrum">
-            <div class="collectionHeader-heroInner">
-                <div class="collectionHeader-logo js-collectionHeaderLogo" style="max-width: 800px;">
-                    <a class="link u-baseColor--link" href="https://aninjusticemag.com" title="Go to An Injustice!" aria-label="Go to An Injustice!" data-collection-slug="an-injustice">
-                        <div class="u-relative u-marginAuto">
-                            <div style="padding-bottom: 25%"></div>
-                            <img class="collectionHeader-logoImage js-collectionHeaderLogoImage" src="https://cdn-images-1.medium.com/max/800/1*VxhOtAU80HShAJm2n5YCVQ@2x.png" data-image-id="1*VxhOtAU80HShAJm2n5YCVQ@2x.png" data-width="1600" data-height="400">
-                        </div>
-                    </a>
-                </div>
-                <div class="collectionHeader-nameAndDescription u-hide"><a class="link u-baseColor--link" href="https://aninjusticemag.com" title="Go to An Injustice!" aria-label="Go to An Injustice!" data-collection-slug="an-injustice"><h1 class="collectionHeader-name js-collectionName">An Injustice!</h1></a>
-                    <h2 class="collectionHeader-description js-collectionDescription">A new intersectional publication, geared towards voices, values, and identities!</h2>
-                </div>-
-            </div>
-        </div>
-    </header>
-</div>-->
