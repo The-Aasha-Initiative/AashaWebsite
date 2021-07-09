@@ -429,18 +429,17 @@ canvas {
 
 i {
     text-decoration: none;
-    color: var(--bs-secondary);
 }
 
-.fa-facebook-square {
+.ffa {
     color: #3b5998;
 }
 
-.fa-twitter-square {
+.tfa {
     color: #1da1f2;
 }
 
-.fa-linkedin {
+.lfa {
     color: #0a66c2;
 }
 
