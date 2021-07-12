@@ -37,6 +37,10 @@ canvas {
   z-index: 2;
 }
 
+.nav-shadow {
+    box-shadow: 0 4px 12px 0 rgb(0 0 0 / 5%);
+}
+
 /* TOP BANNER */
 
 #banner {  
@@ -229,8 +233,7 @@ canvas {
 }
 
 #blog-nav {
-    padding-bottom: 0;
-    box-shadow: 0 4px 12px 0 rgb(0 0 0 / 5%);
+    padding-bottom: 0;  
 }
 
 #blog-nav > .navbar-collapse > .navbar-nav > .nav-link {
@@ -243,8 +246,7 @@ canvas {
 }
 
 .navbar-border {
-    border-bottom: 0.1em solid rgba(58, 44, 44, 0.11);
-    width: 11%;    
+    border-bottom: 0.1em solid rgba(58, 44, 44, 0.164);  
 }
 
 .blog-header-image {
@@ -444,6 +446,58 @@ i {
 }
 
 /* CONTENT PAGE END */
+
+/* THERAPISTS PAGE */
+.navbar > .nb {
+    margin-left: 25%;
+    color: rgba(0, 0, 0, 0.65); 
+}
+
+.mr-right {
+    margin-right: 22%;
+}
+
+.border-r {
+    border-right: 0.1em solid rgba(58, 44, 44, 0.164);
+}
+
+
+.t-header {
+    text-align: center;
+}
+
+.t-header > h5 {
+    color: rgba(0, 0, 0, 0.55); 
+}
+
+#boxes {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 25px;
+}
+
+#square-box {
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.582);
+}
+
+#lsearch {
+    width: 41%;
+}
+
+#intro{
+    background-color:white;   
+    padding: 1.5em;
+}
+
+#links
+    {
+        background-color: #ff0000;
+        color:white;
+        padding: 1.5em;
+    }
+
+/* THERAPISTS PAGE END */
 
 /* CHANGE LAYOUT FOR MOBILE DEVICES */
 

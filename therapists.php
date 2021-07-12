@@ -14,20 +14,24 @@
 
     <style>
 
-    #square-box {
+    /* #square-box {
         box-sizing: border-box;
         width: 25%;
         height: 100%;
         border: 2px solid black;
-    }
+    } */
     #intro
     {
-        background-color:white; 
+        background-color:white;   
+        padding: 1.5em;
     }
+
     #links
     {
-        background-color:red;
-    }
+        background-color: #ff0000;
+        color:white;
+        padding: 1.5em;
+    } 
 
     </style>
 
@@ -43,72 +47,118 @@
 <body>
     <img id="blog-banner" src="images/sreerag.png">
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="blog-nav">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top navbar-border nav-shadow">
             
-        <!-- <a class="navbar-brand" href="#">Aasha</a> -->
+        <a class="navbar-brand nb" href="index.html">HOME</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse navbar-border" id="navbarNavAltMarkup">
-            <div class="navbar-nav mx-auto">
-                <a class="nav-link"  aria-current="page" href="index.html">HOME</a>
-                <a class="nav-link" href="#">Find Therapists</a>
-                <a class="nav-link" href="#">For Professionals</a>
+        <div class="collapse navbar-collapse text-right flex-grow-1 mr-right" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto me-5 flex-nowrap">
+                <a class="nav-link border-r" href="#">Find Therapists</a>
+                <a class="nav-link me-5 mr-right" href="#">For Professionals</a>
             </div>
         </div>
 
     </nav>
-    <div> 
-    <h2>Find Mental Health Professionals</h2>
-    <h5>Find Psychotherapists,Counsellors,Psychologists,Psychiatrists and Mental Health Clinics</h5>
-    </div>
+
+    <div class="container-fluid">
+
+        <div class="t-header"> 
+            <h2 class="mt-5">Find Mental Health Professionals</h2>
+            <h5 class="mt-3 mb-5">Find Psychotherapists, Counsellors, Psychologists, Psychiatrists and Mental Health Clinics</h5>
+        </div>
     
-    <center><form id="search-box" method="post">
-        <label for="lgsearch">Search by Location:</label>
-        <input type="search" id="lsearch" name="lsearch" placeholder="Area (e.g. Delhi)" title="Type in the city" width="300px">
+        <form class="ms-5 me-5" id="search-box" method="post">
+            <label for="lgsearch">Search by Location:</label>
+            <input type="search" id="lsearch" name="lsearch" placeholder="Area (e.g. Delhi)" title="Type in the city">
+            
+        </form>
+
         <hr>
-    </form></center>
-    
-    
-    <?php
-    $username = "root";
-    $password = "";
-    $database = "aasha";
-    $mysqli = new mysqli("localhost", $username, $password, $database);
+        <select id="profession">
+            <option selected="true" disabled="disabled">Filter by Profession</option> 
+            <option value="aceo">Aasha CEO</option>
+            <option value="webd">Web Developer</option>
+        </select>
 
-    if (!empty($_REQUEST['lsearch'])) {
+        <select id="idas">
+            <option selected="true" disabled="disabled">Identifies as</option> 
+            <option value="falcon">Falcon</option>
+            <option value="fogripper">Fogripper</option>
+            <option value="memento">Memento</option>
+            <option value="flashbang">Flashbang</option>
+        </select>
 
-    $term = $mysqli -> real_escape_string($_REQUEST['lsearch']);     
-    
-    $query = "SELECT * FROM THERAPISTS WHERE Location  LIKE '%".$term."%'";
-    //echo "<b> <center>Database Output</center> </b> <br> <br>";
-    
-    if ($result = $mysqli->query($query)) {
-    
-        while ($row = $result->fetch_assoc()) {
-            $field1name = $row["Therapist ID"];
-            $field2name = $row["Name"];
-            $field3name = $row["Designation"];
-            $field4name = $row["Identifies As"];
-            $field5name = $row["Client Group"];
-            $field6name = $row["Languages"];
-            $field7name = $row["Issues Related"];
-            $field8name = $row["Location"];
-           
-            echo '<div id="square-box">
-                    <div id="intro">';echo $field2name;echo'</div>
-                   <div id="links">';echo $field8name;echo'</div>
-                  </div>';
+        <select id="clgr">
+            <option selected="true" disabled="disabled">Client group</option> 
+            <option value="dilshad garden people">Dilshad Garden People</option>
+            <option value="kids">Kids</option>
+            <option value="couples">Couples</option>
+            <option value="groups">Groups</option>
+        </select>
 
-        }
-    
-        /*freeresultset*/
-        $result->free();
-        }
-    }
-      ?>
+        <select id="istr">
+            <option selected="true" disabled="disabled">Issues Treated</option> 
+            <option value="mental health">Mental Health</option>
+            <option value="website">Website</option>
+            <option value="css">CSS</option>
+            <option value="web hosting">Web Hosting</option>
+        </select>
 
-<div id="footer" style="position: relative; z-index: 9;">
+        <select id="language">
+            <option selected="true" disabled="disabled">Language</option> 
+            <option value="english">English</option>
+        </select>
+
+        <div id="boxes">  
+            <?php
+            $username = "root";
+            $password = "";
+            $database = "aasha";
+            $mysqli = new mysqli("localhost", $username, $password, $database);
+
+            if (!empty($_REQUEST['lsearch'])) {
+
+            $term = $mysqli -> real_escape_string($_REQUEST['lsearch']);     
+            
+            $query = "SELECT * FROM `therapists` AS `T` inner join `personal details` as `P` ON `T`.`Therapist ID` = `P`.`Therapist ID` WHERE `Location` LIKE '%".$term."%'";
+            //echo "<b> <center>Database Output</center> </b> <br> <br>";
+            
+            if ($result = $mysqli->query($query)) {
+            
+                while ($row = $result->fetch_assoc()) {
+                    $field1name = $row["Therapist ID"];
+                    $field2name = $row["Name"];
+                    $field3name = $row["Designation"];
+                    $field4name = $row["Identifies As"];
+                    $field5name = $row["Client Group"];
+                    $field6name = $row["Languages"];
+                    $field7name = $row["Issues Related"];
+                    $field8name = $row["Location"];
+                    $field9name = $row["Phone Number"];
+                    $field10name = $row["Intro"];
+                    $field11name = $row["Instagram Link"];
+                    $field12name = $row["Linkedin Link"];
+                    $field13name = $row["Aasha URL"];
+
+                    echo '<div id="square-box">
+                            <div id="intro"><p>';echo $field2name;echo'</p><p>';echo $field3name;echo'</p><p>';echo $field10name;echo'</p><p>';echo $field8name;echo'</p><p></div>
+                            <div id="links"><p>';echo $field13name;echo $field12name;echo $field11name;echo'</p><p>Phone Number: ';echo $field9name;echo'</p></div>
+                          </div>';
+                }
+            
+                /*freeresultset*/
+                $result->free();
+                }
+            }
+            ?>
+
+        </div>
+
+    </div>
+
+    <div id="footer" style="position: relative; z-index: 9;">
         <img src="images/coverfooter.jpg" class="img-fluid" id="footerbanner" alt="...">  
     </div>
 
