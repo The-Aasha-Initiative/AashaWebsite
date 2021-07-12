@@ -61,8 +61,21 @@
   <li><a href="#">Chennai</a></li>
   <li><a href="#">Bangalore</a></li>
 </ul>
-<script></script>
+<p>
+    <?php
 
+include "dbconn.php"; // Using database connection file here
+
+$data = mysqli_query($db,"SELECT * FROM `THERAPISTS"); // fetch data from database
+
+  <p><?php echo $data['Name']; ?></p>
+  <p><?php echo $data['ID']; ?></p>
+  <p><?php echo $data['Address']; ?></p>
+
+
+?>
+</p>
+<?php mysqli_close($db); // Close connection ?>
 </script>
     <script>
         var UL = document.getElementById("myUL");
