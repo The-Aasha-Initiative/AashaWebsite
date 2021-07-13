@@ -76,51 +76,107 @@
         </form>
 
         <hr>
-        <select id="profession">
-            <option selected="true" disabled="disabled">Filter by Profession</option> 
-            <option value="aceo">Aasha CEO</option>
-            <option value="webd">Web Developer</option>
-        </select>
+        <?php
+            $username = "root";
+            $password = "";
+            $database = "aasha";
+            $mysqli = new mysqli("localhost", $username, $password, $database);
 
-        <select id="idas">
-            <option selected="true" disabled="disabled">Identifies as</option> 
-            <option value="falcon">Falcon</option>
-            <option value="fogripper">Fogripper</option>
-            <option value="memento">Memento</option>
-            <option value="flashbang">Flashbang</option>
-        </select>
+            $sql = "SELECT DISTINCT `Designation` FROM `therapists`"; 
+            if($res = $mysqli->query($sql))
+            {
 
-        <select id="clgr">
-            <option selected="true" disabled="disabled">Client group</option> 
-            <option value="dilshad garden people">Dilshad Garden People</option>
-            <option value="kids">Kids</option>
-            <option value="couples">Couples</option>
-            <option value="groups">Groups</option>
-        </select>
+                echo '<select id="profession">
+                <option selected="true" disabled="disabled">Filter by Profession</option> ';
 
-        <select id="istr">
-            <option selected="true" disabled="disabled">Issues Treated</option> 
-            <option value="mental health">Mental Health</option>
-            <option value="website">Website</option>
-            <option value="css">CSS</option>
-            <option value="web hosting">Web Hosting</option>
-        </select>
+                while ($row = $res->fetch_assoc()) {
+                    echo "<option value='" . $row['Designation'] ."'>" . $row['Designation'] ."</option>";
+                } 
+                echo '</select>';
+                $res->free();
+            }
 
-        <select id="language">
-            <option selected="true" disabled="disabled">Language</option> 
-            <option value="english">English</option>
-        </select>
+            $ids = "SELECT DISTINCT `Identifies As` FROM `therapists`";
+            if($res = $mysqli->query($ids))
+            {
 
+                echo '<select id="idas">
+                <option selected="true" disabled="disabled">Identifies as</option> ';
+
+                while ($row = $res->fetch_assoc()) {
+                    echo "<option value='" . $row['Identifies As'] ."'>" . $row['Identifies As'] ."</option>";
+                } 
+                echo '</select>';
+                $res->free();
+            }
+            
+            $clgr = "SELECT DISTINCT `Client Group` FROM `therapists`";
+            if($res = $mysqli->query($clgr))
+            {
+
+                echo '<select id="idas">
+                <option selected="true" disabled="disabled">Client Group</option> ';
+
+                while ($row = $res->fetch_assoc()) {
+                    echo "<option value='" . $row['Client Group'] ."'>" . $row['Client Group'] ."</option>";
+                } 
+                echo '</select>';
+                $res->free();
+            }
+            $istr = "SELECT DISTINCT `Issues Related` FROM `therapists`";
+            if($res = $mysqli->query($istr))
+            {
+
+                echo '<select id="idas">
+                <option selected="true" disabled="disabled">Issues treated</option> ';
+
+                while ($row = $res->fetch_assoc()) {
+                    echo "<option value='" . $row['Issues Related'] ."'>" . $row['Issues Related'] ."</option>";
+                } 
+                echo '</select>';
+                $res->free();
+            } 
+            $lan = "SELECT DISTINCT `Languages` FROM `therapists`";
+            if($res = $mysqli->query($lan))
+            {
+
+                echo '<select id="idas">
+                <option selected="true" disabled="disabled">Languages</option> ';
+
+                while ($row = $res->fetch_assoc()) {
+                    echo "<option value='" . $row['Languages'] ."'>" . $row['Languages'] ."</option>";
+                } 
+                echo '</select>';
+                $res->free();
+            }   
+            
+        
+
+        // <select id="istr">
+        //     <option selected="true" disabled="disabled">Issues Treated</option> 
+        //     <option value="mental health">Mental Health</option>
+        //     <option value="website">Website</option>
+        //     <option value="css">CSS</option>
+        //     <option value="web hosting">Web Hosting</option>
+        // </select>
+
+        // <select id="language">
+        //     <option selected="true" disabled="disabled">Language</option> 
+        //     <option value="english">English</option>
+        // </select>
+            
+        ?>
         <div id="boxes">  
             <?php
             $username = "root";
             $password = "";
             $database = "aasha";
             $mysqli = new mysqli("localhost", $username, $password, $database);
+            
 
             if (!empty($_REQUEST['lsearch'])) {
 
-            $term = $mysqli -> real_escape_string($_REQUEST['lsearch']);     
+            $term = $mysqli -> real_escape_string($_REQUEST['lsearch']);   
             
             $query = "SELECT * FROM `therapists` AS `T` inner join `personal details` as `P` ON `T`.`Therapist ID` = `P`.`Therapist ID` WHERE `Location` LIKE '%".$term."%'";
             //echo "<b> <center>Database Output</center> </b> <br> <br>";
