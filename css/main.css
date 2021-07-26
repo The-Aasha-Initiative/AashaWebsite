@@ -78,7 +78,7 @@ canvas {
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-    color: #222;
+    color: #2c3e50;
 }
 
 .navbar-light .nav-item {
@@ -415,7 +415,7 @@ canvas {
 /* CONTENT PAGE */
 
 #blogs {
-    width: 65%;
+    max-width: 680px;
     margin: 32px auto auto auto;
 }
 
@@ -426,7 +426,7 @@ canvas {
 
 .author-socials {
     justify-self: end;
-    font-size: 23px;
+    font-size: 21px;
 }
 
 i {
@@ -445,6 +445,24 @@ i {
     color: #0a66c2;
 }
 
+.content-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.content-first-image {
+    margin-top: 33px;
+}
+
+.article > p {
+    margin-top: 2em;
+    letter-spacing: -0.003em;
+    line-height: 32px;
+    font-size: 19px;
+    font-weight: 400;
+}
+
 /* CONTENT PAGE END */
 
 /* THERAPISTS PAGE */
@@ -453,14 +471,31 @@ i {
     color: rgba(0, 0, 0, 0.65); 
 }
 
+.navbar > .nb:hover {
+    color: #2c3e50; 
+}
+
+#therapists-container {
+    width: 90%;
+}
+
 .mr-right {
     margin-right: 22%;
 }
 
+.mr-t {
+    margin-top: 1.5em;
+}
+
+.mr-tb {
+    margin-top: 56px;
+    margin-bottom: 1em;
+}
+
+
 .border-r {
     border-right: 0.1em solid rgba(58, 44, 44, 0.164);
 }
-
 
 .t-header {
     text-align: center;
@@ -472,30 +507,205 @@ i {
 
 #boxes {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 25% 25% 25% 25%;
     grid-gap: 25px;
 }
 
-#square-box {
+#profile-card {
+    display: grid;
     box-sizing: border-box;
     border: 1px solid rgba(0, 0, 0, 0.582);
+    grid-template-rows: 75% 25%;
 }
 
-#lsearch {
-    width: 41%;
+
+#lsearch 
+{
+    width: 31%;
 }
 
-#intro{
+#dropdowns 
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#info
+{   
+    display: grid;
     background-color:white;   
     padding: 1.5em;
 }
 
+.therapist-name {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+#info > .location {
+    align-self: end;
+}
+
 #links
-    {
-        background-color: #ff0000;
-        color:white;
-        padding: 1.5em;
-    }
+{       
+    background-color: #ff0000;
+    color:white;
+    padding: 1.5em;
+}
+
+.t-links { 
+    display: grid;
+    text-decoration: none;
+    color: white;
+}
+
+.t-links:hover {
+    color: black;
+}
+
+.t-links i {
+    font-size: 29px;
+    
+}
+
+#t-socials 
+{
+    display: grid;
+    font-size: 25px;
+    grid-template-columns: 60px 9px 35px 9px 35px;
+    
+}
+
+.tli {
+    align-self: center;
+    justify-self: center;
+}
+
+.tp {
+    font-size: 21px;
+    align-self: center;
+}
+
+#boxes > #profile-card > #links > #t-socials > a > i {
+    text-decoration:white !important;
+}
+
+label 
+{
+    color: #4b4c4d;
+}
+
+.search 
+{
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+  
+.searchTerm 
+{
+    width: 100%;
+    border: 3px solid #F21F42;
+    padding: 5px;
+    border-radius: 5px 5px 5px 5px;
+    outline: none;
+    color: #6e6e6e;
+}
+  
+.searchTerm:focus
+{
+    color: #2c3e50;
+}
+
+
+/* Reset Select */
+select 
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background: #c3c3c3;
+    background-image: none;
+}
+
+/* Remove IE arrow */
+select::-ms-expand 
+{
+    display: none;
+}
+
+/* Custom Select */
+.select 
+{
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    line-height: 3;
+    background: #2c3e50;
+    overflow: hidden;
+    border-radius: .25em;
+}
+
+select 
+{
+    flex: 1;
+    padding: 0 .5em;
+    color: #2c3e50;
+    cursor: pointer;
+}
+
+  /* Arrow */
+.select::after 
+{
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #F21F42;
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+}
+
+  /* Transition */
+.select:hover::after 
+{
+    color: #fff;
+}
+
+.intro 
+{
+    margin: 11% auto;
+}
+
+.clickshow {
+    cursor: pointer;
+}
+
+.name-desig-img {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.prof-img {
+    object-fit: contain;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.p-img {
+    justify-self: end;
+}
 
 /* THERAPISTS PAGE END */
 

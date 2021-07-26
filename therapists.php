@@ -11,54 +11,6 @@
     <link rel="stylesheet" href="css/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-
-    <style>
-
-    /* #square-box {
-        box-sizing: border-box;
-        width: 25%;
-        height: 100%;
-        border: 2px solid black;
-    } */
-    #intro
-    {
-        background-color:white;   
-        padding: 1.5em;
-    }
-
-    #links
-    {
-        background-color: #ff0000;
-        color:white;
-        padding: 1.5em;
-    } 
-
-    </style>
-
-<script>
-    $("#lsearch").keypress(function(event) {
-        if (event.which == 13) {
-            event.preventDefault();
-            $("#search-box").submit();
-        }
-    });
-</script> 
-<script type="text/javascript">
-                                            function getSelectValue(zal)
-                                        {
-                                                $.ajax({
-                                                    type: 'post',
-                                                    url: 'fetch_data.php',
-                                                    data: {
-                                                    get_option:val,
-                                                    },
-                                                    success: function (response) {
-                                                    document.getElementById("boxes").innerHTML=response; 
-                                                }
-                                                });
-                                        }
-                                </script> 
 </head>
 <body>
     <img id="blog-banner" src="images/sreerag.png">
@@ -78,20 +30,21 @@
 
     </nav>
 
-    <div class="container-fluid">
-
-        <div class="t-header"> 
-            <h2 class="mt-5">Find Mental Health Professionals</h2>
-            <h5 class="mt-3 mb-5">Find Psychotherapists, Counsellors, Psychologists, Psychiatrists and Mental Health Clinics</h5>
-        </div>
-        <div id="d1"></div>
+    <div class="t-header"> 
+        <h2 class="mt-5">Find Mental Health Professionals</h2>
+        <h5 class="mt-3 mb-5">Find Psychotherapists, Counsellors, Psychologists, Psychiatrists and Mental Health Clinics</h5>
+    </div>
     
         <form class="ms-5 me-5" id="search-box" method="post"> 
-            <label for="lgsearch">Search by Location:</label>
-            <input type="search" id="lsearch" name="lsearch" placeholder="Area (e.g. Delhi)" title="Type in the city">
+            <label for="lgsearch">Search by Location </label>
+            <input type="search" class="searchTerm" id="lsearch" name="lsearch" placeholder="Area (e.g. Delhi)" title="Type in the city">
         </form>
         <hr>
+
+    <div class="container-fluid" id="therapists-container">
+
         
+        <div id="dropdowns"> 
             <?php
                 session_start();
                 
@@ -104,75 +57,88 @@
                 if($res = $mysqli->query($sql))
                 {
 
-                    echo '
+                    echo '<div class="select">
                                 <select id="profession" name="profession" onchange="getSelectValue(this.value);">
-                                <option selected="true" disabled="disabled">Filter by Profession</option> ';              
+                                <option selected disabled>Filter by Profession</option> ';              
                     while ($row = $res->fetch_assoc()) {
                         echo "<option value='" . $row['Designation'] ."'>" . $row['Designation'] ."</option>";
                     }
-                    echo '</select>';
+                    echo '      </select>
+                          </div>';
                     $res->free();
                   
-                }     
+                } 
+
                 $ids = "SELECT DISTINCT `Identifies As` FROM `therapists`";
                 if($res = $mysqli->query($ids))
                 {
-
-                    echo '<select id="idas">
-                    <option selected="true" disabled="disabled">Identifies as</option> ';
-
+                    echo '<div class="select">
+                                <select id="idas" name="idas" onchange="getSelectValue(this.value);">
+                                <option selected disabled>Identifies as</option> ';              
                     while ($row = $res->fetch_assoc()) {
                         echo "<option value='" . $row['Identifies As'] ."'>" . $row['Identifies As'] ."</option>";
-                    } 
-                    echo '</select>';
+                    }
+                    echo '      </select>
+                          </div>';
                     $res->free();
+                
                 }
                 
                 $clgr = "SELECT DISTINCT `Client Group` FROM `therapists`";
                 if($res = $mysqli->query($clgr))
                 {
 
-                    echo '<select id="idas">
-                    <option selected="true" disabled="disabled">Client Group</option> ';
+                    echo '<div class="select">
+                            <select id="clgr" name="clgr" onchange="getSelectValue(this.value);">
+                                <option selected disabled>Client Group</option> ';
 
                     while ($row = $res->fetch_assoc()) {
-                        echo "<option value='" . $row['Client Group'] ."'>" . $row['Client Group'] ."</option>";
+                        echo "  <option value='" . $row['Client Group'] ."'>" . $row['Client Group'] ."</option>";
                     } 
-                    echo '</select>';
+                    echo '   </select>
+                          </div>';
                     $res->free();
                 }
-                $istr = "SELECT DISTINCT `Issues Related` FROM `therapists`";
+
+                $istr = "SELECT DISTINCT `Issues Treated` FROM `therapists`";
                 if($res = $mysqli->query($istr))
                 {
 
-                    echo '<select id="idas">
-                    <option selected="true" disabled="disabled">Issues treated</option> ';
+                    echo '<div class="select">
+                             <select id="istr" name="istr" onchange="getSelectValue(this.value);">
+                                <option selected disabled>Issues treated</option> ';
 
                     while ($row = $res->fetch_assoc()) {
-                        echo "<option value='" . $row['Issues Related'] ."'>" . $row['Issues Related'] ."</option>";
+                        echo "  <option value='" . $row['Issues Treated'] ."'>" . $row['Issues Treated'] ."</option>";
                     } 
-                    echo '</select>';
+                    echo '   </select>
+                          </div>';
                     $res->free();
                 } 
+                
                 $lan = "SELECT DISTINCT `Languages` FROM `therapists`";
                 if($res = $mysqli->query($lan))
                 {
 
-                    echo '<select id="idas">
-                    <option selected="true" disabled="disabled">Languages</option> ';
+                    echo '<div class="select">
+                             <select id="idas" name="lan" onchange="getSelectValue(this.value);">
+                                <option selected disabled>Languages</option> ';
 
                     while ($row = $res->fetch_assoc()) {
-                        echo "<option value='" . $row['Languages'] ."'>" . $row['Languages'] ."</option>";
+                        echo "  <option value='" . $row['Languages'] ."'>" . $row['Languages'] ."</option>";
                     } 
-                    echo '</select>';
+                    echo '   </select>
+                          </div>';
                     $res->free();
                 }
                   
                   ?>
+                </div>  
+                <div id="boxes" class="mr-t"> 
                   <?php
-                   echo '<div id="boxes">';  
+                    
                     if (!empty($_REQUEST['lsearch'])) {
-
+                        
                     $term = $mysqli -> real_escape_string($_REQUEST['lsearch']);
                     $_SESSION['location'] = $term;
                     
@@ -189,55 +155,59 @@
                             $field4name = $row["Identifies As"];
                             $field5name = $row["Client Group"];
                             $field6name = $row["Languages"];
-                            $field7name = $row["Issues Related"];
+                            $field7name = $row["Issues Treated"];
                             $field8name = $row["Location"];
                             $field9name = $row["Phone Number"];
                             $field10name = $row["Intro"];
                             $field11name = $row["Instagram Link"];
                             $field12name = $row["Linkedin Link"];
                             $field13name = $row["Aasha URL"];
+                            $field14name = $row["Image"];
         
-                           // if($myVar = $field3name)
-                            //{
-                                    echo '<div id="square-box">
-                                            <div id="intro"><p>';echo $field2name;echo'</p><p>';echo $field3name;echo'</p><p>';echo $field10name;echo'</p><p>';echo $field8name;echo'</p><p></div>
-                                            <div id="links"><p>';echo $field13name;echo $field12name;echo $field11name;echo'</p><p class="showphone"><span class="clickshow" style="display: inline;"><b>Show Phone Number</b></span>
-                                            <span class="hiddenphone" style="display: none;">
-                                                        <span>';echo $field9name;echo'</span>
-                                                        
-                                            </span></p></div>
-                                        </div>';//;echo $field9name;echo
-                            //}           
+                                    echo '<div id="profile-card">
+                                              <div id="info">
+                                                  <div class="name-desig-img">
+                                                    <div class="name-desig">          
+                                                        <p class="therapist-name">';echo $field2name;echo'</p>
+                                                        <p>';echo $field3name;echo'</p>
+                                                    </div>
+                                                    <div class="p-img">
+                                                        <img class="prof-img" src="';echo $field14name;echo'">
+                                                    </div>  
+                                                  </div>   
+                                                  <div class="intro">
+                                                      <p>';echo $field10name;echo'</p>
+                                                  </div>
+                                                  <div class="location">  
+                                                       <p>';echo $field8name;echo'</p><p>
+                                                  </div>
+                                              </div>    
+                                              <div id="links">
+                                                  <div id="t-socials">
+                                                    <div class="tp"><a class="t-links" href="';echo $field13name;echo'">';echo' Profile </a></div>
+                                                    <div class="tli">|</div>
+                                                    <div class="tli"><a class="t-links" href="';echo $field12name;echo '"><i class="fab fa-linkedin">';echo'</i></a> </div>  
+                                                    <div class="tli">|</div>
+                                                    <div class="tli"><a class="t-links" href="';echo $field11name;echo '"><i class="fab fa-instagram-square">';echo'</i></a></div>
+                                                  </div>  
+                                                  <p class="showphone">
+                                                      <span class="clickshow" style="display: inline;"><b>Show Phone Number</b></span>
+                                                      <span class="hiddenphone" style="display: none;">
+                                                          <span>';echo $field9name;echo'</span>
+                                                      </span>
+                                                  </p>
+                                              </div>
+                                        </div>';        
                         }
                     
                         /*freeresultset*/
                         $result->free();
                         }
                     }   
-                    echo '</div>';   
+                      
                     ?>
-            <script>
-                    $(".hiddenphone").hide();//hide the initial phone number
-
-                    $(".showphone").on("click", function (event) {
-                            event.stopPropagation();
-                            // if .hiddenphone class for this template instance is hidden
-                            if ($(this).find('.hiddenphone').is(':hidden')) {
-                                // change text
-                                $(this).find('.hiddenphone').show();
-                                $(this).find('.clickshow').hide();
-                                // Meteor.call('incrementShowNumberStats', $(this).attr("data-id"));
-                                // // send email notification
-                                // const therapistPreviewid = $(this).attr("data-id");
-                                // Meteor.call('practiceNumberNotification', therapistPreviewid);
-                            }
-                        });       
-            </script>
-            <!-- // <select id="language">
-            //     <option selected="true" disabled="disabled">Language</option> 
-            //     <option value="english">English</option>
-            // </select>
-                 -->
+                </div>    
+            
     </div>
 
     <div id="footer" style="position: relative; z-index: 9;">
@@ -260,7 +230,7 @@
         </footer>
     </div>
 
-
-
+    <script src="js/therapists.js"></script>                         
+                            
 </body>
 </html>
