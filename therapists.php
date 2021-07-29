@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Aasha Initiative</title>
+    <title>Align</title>
     <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico"/>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fontawesome.css">
     <link rel="stylesheet" href="css/main.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <img id="blog-banner" src="images/sreerag.png">
+    <img id="blog-banner" src="images/Find_Therapists.png">
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top navbar-border nav-shadow">
             
@@ -168,7 +168,7 @@
                                               <div id="info">
                                                   <div class="name-desig-img">
                                                     <div class="name-desig">          
-                                                        <p class="therapist-name">';echo $field2name;echo'</p>
+                                                        <a class="therapist-name" href="profile.php">';echo $field2name;echo'</a>
                                                         <p>';echo $field3name;echo'</p>
                                                     </div>
                                                     <div class="p-img">

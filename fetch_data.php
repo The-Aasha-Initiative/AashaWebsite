@@ -1,3 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Aasha Initiative</title>
+    <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico"/>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(".hiddenphone").hide();//hide the initial phone number
+
+        $(".showphone").on("click", function (event) {
+            event.stopPropagation();
+        
+            if ($(this).find(".hiddenphone").is(":hidden")) {
+                // change text
+                $(this).find(".hiddenphone").show();
+                $(this).find(".clickshow").hide();
+            }
+        }); 
+    </script>
+</head>
+<body>
 
 <?php
 
@@ -36,10 +64,15 @@ if(isset($_POST['get_option']))
             
             echo '<div id="profile-card">
             <div id="info">
-                <div class="name-desig">
-                    <p class="therapist-name">';echo $field2name;echo'</p>
-                    <p>';echo $field3name;echo'</p>
-                </div>   
+                <div class="name-desig-img">
+                    <div class="name-desig">          
+                        <a class="therapist-name" href="http://localhost/aasha/profile.php/'. $field2name .'">';echo $field2name;echo'</a>
+                        <p>';echo $field3name;echo'</p>
+                    </div>
+                    <div class="p-img">
+                        <img class="prof-img" src="';echo $field14name;echo'">
+                    </div>  
+                </div>
                 <div class="intro">
                     <p>';echo $field10name;echo'</p>
                 </div>
@@ -64,22 +97,12 @@ if(isset($_POST['get_option']))
             </div>
             </div>';       
         }
-        echo "<script type='text/javaScript'>
-              $('.hiddenphone').hide();//hide the initial phone number
-
-              $('.showphone').on('click', function (event) {
-                event.stopPropagation();
         
-                if ($(this).find('.hiddenphone').is(':hidden')) {
-                    // change text
-                    $(this).find('.hiddenphone').show();
-                    $(this).find('.clickshow').hide();
-                }
-              }); 
-              </script>";
     /*freeresultset*/
     $result->free();
     }
 }
 
 ?>
+</body>
+</html>
