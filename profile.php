@@ -9,10 +9,14 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fontawesome.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" rel="stylesheet"> 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-<body class="p-body">
+<body class="t-body">
     <nav class="navbar navbar-expand-lg navbar-light nav-shadow prof-nav" style="background-color: #fff;">
         <a class="navbar-brand" href="#"><img src="https://codingyaar.com/wp-content/uploads/logo.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbarToggler10"
@@ -43,15 +47,15 @@
         </div>
     </nav>
 
-    <div class="profile-banner">
+    <div class="therapist-banner">
         <!-- <img class="profile-banner-image" src="images/profile-banner1.jpg" alt="">  -->
     </div>
 
-    <div class="profile-container">
+    <div class="therapist-container">
 
         <div class="therapist-name-about bg-lighter">
-            <div class="profile-photo mr-t light-bg">
-                <img class="profile-image" src="images/sreerag2.jpg" alt="">    
+            <div class="therapist-photo mr-t light-bg">
+                <img class="therapist-image" src="images/sreerag2.jpg" alt="">    
             </div>
 
             <div class="therapist-name light-bg">
@@ -85,6 +89,7 @@
                 <ul>
                     <li>Psychotherapy</li>
                     <li>Group Therapy</li>
+                    <li>Counselling</li>
                 </ul>
             </div>
             <div class="specialization">
@@ -99,9 +104,9 @@
             </div>
         </div>
 
-        <div class="therapist-other mr-b1 bg-lighter">
+        <div class="therapist-other bg-lighter">
             <div class="row">
-                <div class="col-md-10 mx-auto">
+                <div class="col-md-7 mx-auto">
                     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -145,49 +150,27 @@
         </div>
 
         <div class="therapist-contact bg-slighty-dark">
-            <div class="custom-heading2">
-                <h2>Contact Me</h2>
-            </div>    
-            <p>9234259645</p>
+            <div class="contact-me">
+                <div class="custom-heading2">
+                    <h2>Contact Me</h2>
+                </div>
+                <p></p>
+                <h5>Hours</h5>
+                <p>Mon to Fri</p>
+                <p>9:00 PM to 5:00 PM</p> 
+                <h5>Phone</h5> 
+                <p>9234259645</p>
+                <h5>Email</h5> 
+                <p>johndoe@gmail.com</p>
+            </div>
+
+            <div class="therapist-map">    
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15555.809455620778!2d77.5963265!3d12.91078325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae152ac5e81903%3A0xd599c95166a87880!2sVEGA%20CITY%20MALL!5e0!3m2!1sen!2sin!4v1627650252401!5m2!1sen!2sin" width="550" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>  
         </div>
 
     </div>
 
-    
-
-    <div id="footer" style="position: relative; z-index: 9;">
-        <img src="images/coverfooter.jpg" class="img-fluid" id="footerbanner" alt="...">  
-    </div>
-
-    <div class="footer-basic" style="position: relative; z-index: 9;">
-        <footer>
-            <ul class="list-inline">
-                <li class="list-inline-item fw-bold fs-4">Reach Us</li>
-            </ul>
-            
-            <div class="social">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/company/the-aasha-initiative/"><i class="fab fa-linkedin"></i></a>
-                <!-- <a href="#"><i class="icon ion-social-twitter"></i></a>
-                <a href="#"><i class="icon ion-social-facebook"></i></a> -->
-            </div> 
-            
-            <p class="copyright">The Aasha Initiative © 2021</p>
-        </footer>
-    </div>
-    <!-- <div id="googleMap" style="width:100%;height:400px;"></div>
-
-    <script>
-        function myMap() {
-            var mapProp= {
-            center:new google.maps.LatLng(51.508742,-0.120850),
-            zoom:5,
-        };
-        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-        }
-    </script>
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script> -->
 
 </body>
 </html> 

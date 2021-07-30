@@ -1,3 +1,7 @@
+* {
+    box-sizing:border-box
+}
+
 .row {  
     display: flex;
     flex-wrap: wrap;
@@ -12,6 +16,7 @@ body {
          -o-user-select: none;
         -ms-user-select: none;
             user-select: none;
+    overflow-x: hidden;
     
 }
 
@@ -160,8 +165,8 @@ canvas {
 }
 
 .footer-basic {
-    padding:40px 0 20px;
-    background-color:#01ffdb;
+    padding:0 0 20px;
+    background-color:#f21f42;
     color:#4b4c4d;
 }
   
@@ -201,17 +206,17 @@ canvas {
     display:inline-block;
     text-align:center;
     border-radius:50%;
-    border:1px solid #ff0125;
+    border:1px solid #222;
     margin:0 8px;
-    color: #fff;
     opacity:1;
-    background-color: #ff0125;
+    background-color: #fff;
 }
   
 .footer-basic .social > a:hover {
     opacity:0.9;
     color: #ff0125;
-    background-color: #fff;
+    background-color: #222;
+    border:1px solid rgb(105, 105, 105);
 }
   
 .footer-basic .copyright {
@@ -724,6 +729,19 @@ select
 
 /* PROFILE PAGE */
 
+.t-body {
+    font-family: 'Titillium Web', sans-serif;
+    Overflow-x:hidden;
+    margin: 0;
+}
+
+.therapist-container h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
 .bg-lighter {
     background-color: #fff;
 }
@@ -732,18 +750,12 @@ select
     background-color: #f3f3f3;
 }
 
-.profile-container {
-    display: grid;
-    grid-template-areas: 
-        "profile-banner"
-        "therapist-name-about"
-        "therapist-services"
-        "therapist-other"
-        "therapist-contact";
+.therapist-container p, li {
+    font-size: 1.15rem;
 }
 
-.profile-banner {
-    grid-area: profile-banner;
+.therapist-banner {
+    grid-area: therapist-banner;
     background-image: url('../images/profile-banner1.jpg'); 
     background-position: center;
     background-repeat: no-repeat;
@@ -758,7 +770,6 @@ select
         "therapist-name therapist-name"
         "profile-photo profile-about";
     padding-bottom: 120px;
-    grid-area: therapist-name-about;
 }
 
 .therapist-name {
@@ -768,7 +779,7 @@ select
     margin: 40px auto 30px auto;
 }
 
-.profile-photo {
+.therapist-photo {
     grid-area: profile-photo;
     place-self: end;
 }
@@ -790,6 +801,7 @@ select
     padding-bottom: 40px;
     padding-left: 100px;
     padding-right: 100px;
+    height: 500px;
 }
 
 .mhs-img {
@@ -808,31 +820,10 @@ select
 
 .therapist-other {
     grid-area: therapist-other;
-    padding: 40px auto 40px auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
-.profile-container h1 {
-    position: relative;
-    padding: 0;
-    margin: 0;
-    font-weight: 300;
-    font-size: 40px;
-    color: #080808;
-    -webkit-transition: all 0.4s ease 0s;
-    -o-transition: all 0.4s ease 0s;
-    transition: all 0.4s ease 0s;
-  }
-  
-  .profile-container h1 span {
-    display: block;
-    font-size: 0.5em;
-    line-height: 1.3;
-  }
-  .profile-container h1 em {
-    font-style: normal;
-    font-weight: 600;
-  }
-  
 .therapist-services ul {
     display: block;
 }
@@ -858,26 +849,22 @@ select
     border-radius: 50%;
 }
 
-
-
-
-
-
-
-
-
-
 .therapist-contact {
+    display: grid;
     grid-area: therapist-contact;
-    place-self: center;
     width: 100%;
+    height: 500px;
+    grid-template-columns: 50% 50%;
 }
 
-.p-body {
-    overflow-x: hidden;
+.contact-me {
+    place-self: center;
 }
 
-/* .custom-content > h1, h2, h3, h4, h5, h6 { font-family: "Raleway", sans-serif; } */
+.therapist-map {
+   align-self: center;
+   justify-self: start;
+}
 
 .prof-nav .navbar-nav .nav-link {
     color: #000000;
@@ -889,6 +876,10 @@ select
 
 .prof-nav .navbar-nav .social-fb{
     color: #1877f2;
+}
+
+.social-lin {
+    color: #2867b2;
 }
 
 .social-in .fab {
@@ -925,19 +916,17 @@ select
   }
 }
 
-.profile-banner-image {
+.therapist-banner-image {
     top: 0; 
     left: 0; 
     max-width: 100%;
     /* Preserve aspect ratio */
-     min-width: 100%;
-     min-height: 100%;
-    
-    margin-bottom: 25px;
-    
+    min-width: 100%;
+    min-height: 100%;
+    margin-bottom: 25px;   
 }
 
-.profile-image {
+.therapist-image {
     width: auto;
     height: 500px;
     border-radius: 5px;
@@ -953,7 +942,7 @@ select
     margin:auto; 
     white-space:nowrap; 
     border:2px solid #222;
-    padding:5px 11px 3px 11px;
+    padding:5px 11px 5px 11px;
     border-radius: 5px;
 }
 
@@ -974,33 +963,12 @@ select
     right:-20px;
 }
 
-.custom-heading2 h2 {
+/* .custom-heading2 h2 {
     font-size: 22px;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 0;
     line-height: 1.5em;
     position: relative;
-}
-
-/* .custom-heading2 h2:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 5px;
-    width: 55px;
-    background-color: #F21F42;
-}
-
-.custom-heading2 h2:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 2px;
-    height: 1px;
-    width: 95%;
-    max-width: 155px;
-    background-color: #f5082f;
 } */
 
 .profile-about h1 {
@@ -1011,8 +979,9 @@ select
     margin-bottom: 20px;
 }
 
-
-
+.contact-me {
+    place-self: center;   
+}
 
 /* PROFILE PAGE END */
 
