@@ -270,8 +270,8 @@ canvas {
     display: block;
     object-fit: fill;
     max-width: 100%;
-    flex: 1;
-    min-height: 100%;
+    flex: 1 1;
+    min-height: 75%;
 }
 
 .blogs-img-border {
@@ -374,18 +374,19 @@ canvas {
 
 .grid-container-2 {
     display: grid;
-    grid-template-columns: 31.75% 31.75% 31.75%; 
+    grid-template-columns: 31.75% 31.75% 31.75%;
+    grid-template-rows: 50% 50%;
     width: 60%;
     grid-gap: 21px;
     margin: 30px auto 15px auto;   
 }
 
 .grid-container-2 > .grid-item {
-    margin-top: 30px;
+    margin-top: 130px;
 }
 
 .grid-container-2 > .grid-item > img { 
-    height:265px;
+    height:33%;
     width:100%;
 }
 
@@ -471,6 +472,7 @@ i {
 /* CONTENT PAGE END */
 
 /* THERAPISTS PAGE */
+
 .navbar > .nb {
     margin-left: 25%;
     color: rgba(0, 0, 0, 0.65); 
@@ -810,11 +812,15 @@ select
 
 .services {
     margin: auto;
+    align-self: center;
+   justify-self: start;
     grid-area: services;
 }
 
 .specialization {
     margin: auto;
+    align-self: center;
+   justify-self: end;
     grid-area: specialization;
 }
 
@@ -981,6 +987,18 @@ select
 
 .contact-me {
     place-self: center;   
+}
+
+#yt-iframe {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+video.is-loading {
+    opacity: 0.4;
+    pointer-events: none;
+    border: 2px solid red;
 }
 
 /* PROFILE PAGE END */

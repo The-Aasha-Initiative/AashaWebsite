@@ -211,14 +211,11 @@
     </div>
 
     <div id="footer" style="position: relative; z-index: 9;">
-        <img src="images/coverfooter.jpg" class="img-fluid" id="footerbanner" alt="...">  
+        <img src="images/footer.png" class="img-fluid" id="footerbanner" alt="...">  
     </div>
 
     <div class="footer-basic" style="position: relative; z-index: 9;">
         <footer>
-            <ul class="list-inline">
-                <li class="list-inline-item fw-bold fs-4">Reach Us</li>
-            </ul>
             
             <div class="social">
                 <a href="#"><i class="fab fa-instagram"></i></a>
