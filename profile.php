@@ -15,7 +15,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/thelevicole/youtube-to-html5-loader@4.0.1/dist/YouTubeToHtml5.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/animations.css">
 </head>
 <body class="t-body">
     <nav class="navbar navbar-expand-lg navbar-light nav-shadow prof-nav" style="background-color: #fff;">
@@ -54,8 +55,8 @@
 
     <div class="therapist-container">
 
-        <div class="therapist-name-about bg-lighter">
-            <div class="therapist-photo mr-t light-bg">
+        <div class="therapist-name-about bg-lighter animatedParent animateOnce" data-sequence="500" data-appear-top-offset='-269'>
+            <div class="therapist-photo mr-t light-bg animated fadeInLeftShort" data-id="1">
                 <img class="therapist-image" src="images/sreerag2.jpg" alt="">    
             </div>
 
@@ -67,11 +68,11 @@
                 <div class="custom-content">
                     
                     <div class="about-me">
-                        <div class="custom-heading2"> 
+                        <div class="custom-heading2 animated fadeInDownShort" data-id="2"> 
                             <h2>About Me</h2>
                         </div>    
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, nostrum vero voluptates distinctio quas accusantium amet illo, laboriosam possimus eos necessitatibus cupiditate reprehenderit dolores explicabo commodi? Consectetur quam facilis veritatis. Dolorem non officia quae quos perferendis laborum necessitatibus voluptas optio.</p>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos officia obcaecati reiciendis quam molestiae esse laborum perferendis quidem cumque quibusdam. Fugiat laboriosam animi voluptate aliquam accusantium! Vel modi recusandae nesciunt nihil consequatur maxime impedit molestiae, distinctio provident commodi perspiciatis veniam aspernatur voluptatem animi quas voluptates at ipsam illum nulla nemo! Suscipit beatae odio, molestiae ducimus culpa expedita doloremque, debitis esse eaque possimus voluptatibus consectetur ratione dolores quidem repellendus. Officia, accusamus molestiae, voluptatibus quibusdam necessitatibus numquam provident possimus delectus officiis pariatur perspiciatis quo perferendis sed architecto libero repellendus at ea veritatis odio tempore itaque! Similique rerum sit vitae nihil exercitationem suscipit.</p>
+                        <p class="animated fadeInUpShort" data-id="2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, nostrum vero voluptates distinctio quas accusantium amet illo, laboriosam possimus eos necessitatibus cupiditate reprehenderit dolores explicabo commodi? Consectetur quam facilis veritatis. Dolorem non officia quae quos perferendis laborum necessitatibus voluptas optio.</p>
+                        <p class="animated fadeInUpShort" data-id="2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos officia obcaecati reiciendis quam molestiae esse laborum perferendis quidem cumque quibusdam. Fugiat laboriosam animi voluptate aliquam accusantium! Vel modi recusandae nesciunt nihil consequatur maxime impedit molestiae, distinctio provident commodi perspiciatis veniam aspernatur voluptatem animi quas voluptates at ipsam illum nulla nemo! Suscipit beatae odio, molestiae ducimus culpa expedita doloremque, debitis esse eaque possimus voluptatibus consectetur ratione dolores quidem repellendus. Officia, accusamus molestiae, voluptatibus quibusdam necessitatibus numquam provident possimus delectus officiis pariatur perspiciatis quo perferendis sed architecto libero repellendus at ea veritatis odio tempore itaque! Similique rerum sit vitae nihil exercitationem suscipit.</p>
                     </div>
                 
                 </div>    
@@ -79,58 +80,66 @@
 
         </div>
 
-        <div class="therapist-services bg-slighty-dark">
+        <div class="therapist-services bg-slighty-dark animatedParent animateOnce" data-sequence='400' data-appear-top-offset='-322'>
             <!-- <div class="mhs-img">
                  <img src="images/mhs.png" alt="" srcset=""> 
             </div> -->
             <div class="services">
-                <div class="custom-heading2">
+                <div class="custom-heading2 animated growIn" data-id='1'>
                     <h2>Services I provide</h2>
                 </div>
                 <ul>
-                    <li>Psychotherapy</li>
-                    <li>Group Therapy</li>
-                    <li>Counselling</li>
+                    <li class="animated fadeInLeft" data-id='2'>Psychotherapy</li>
+                    <li class="animated fadeInLeft" data-id='3'>Group Therapy</li>
+                    <li class="animated fadeInLeft" data-id='4'>Counselling</li>
                 </ul>
             </div>
             <div class="specialization">
-                <div class="custom-heading2">
+                <div class="custom-heading2 animated growIn" data-id='1'>
                     <h2>I specialize in</h2>
                 </div>
                 <ul>
-                    <li>Loneliness</li>
-                    <li>Relationships</li>
-                    <li>Addiction</li>
+                    <li class="animated fadeInRight" data-id='2'>Loneliness</li>
+                    <li class="animated fadeInRight" data-id='3'>Relationships</li>
+                    <li class="animated fadeInRight" data-id='4'>Addiction</li>
                 </ul>
             </div>
         </div>
 
-        <div class="therapist-other bg-lighter">
-                <div >
+        <div class="therapist-other bg-lighter animatedParent animateOnce" data-appear-top-offset='-362'>
+                <div class="animated growIn">
                     <video id="yt-iframe" data-yt2html5="https://www.youtube.com/watch?v=aGR6YQ_o0s0" controls></video>
                 </div>
         </div>
 
-        <div class="therapist-contact bg-slighty-dark">
-            <div class="contact-me">
+        <div class="therapist-contact bg-slighty-dark animatedParent animateOnce" data-sequence='400' data-appear-top-offset='-272'>
+            <div class="contact-me animated bounceInLeft" data-id='1'>
                 <div class="custom-heading2">
                     <h2>Contact Me</h2>
                 </div>
                 <p></p>
-                <h5>Hours</h5>
-                <p>Mon to Fri</p>
-                <p>9:00 PM to 5:00 PM</p> 
-                <h5>Phone</h5> 
-                <p>9234259645</p>
-                <h5>Email</h5> 
-                <p>johndoe@gmail.com</p>
+                <h5 class="animated fadeInLeft" data-id='2'>Hours</h5>
+                <p class="animated fadeInRight" data-id='2'>Mon to Fri</p>
+                <p class="animated fadeInRight" data-id='2'>9:00 PM to 5:00 PM</p> 
+                <h5 class="animated fadeInLeft" data-id='2'>Phone</h5> 
+                <p class="animated fadeInRight" data-id='2'>9234259645</p>
+                <h5 class="animated fadeInLeft" data-id='2'>Email</h5> 
+                <p class="animated fadeInRight" data-id='2'>johndoe@gmail.com</p>
             </div>
 
-            <div class="therapist-map">    
+            <div class="therapist-map animated bounceInRight" data-id='1'>    
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15555.809455620778!2d77.5963265!3d12.91078325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae152ac5e81903%3A0xd599c95166a87880!2sVEGA%20CITY%20MALL!5e0!3m2!1sen!2sin!4v1627650252401!5m2!1sen!2sin" width="550" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>  
         </div>
 
+    </div>
+
+    <div class="footer-basic therapist-footer animatedParent animateOnce" data-appear-top-offset='-129'>
+        <footer>
+            
+            
+            <p class="copyright animated flip">© 2021 ALIGN</p>
+        </footer>
     </div>
     
     <script>
@@ -160,5 +169,7 @@
             withAudio: true // Filter streams to those with audio channels
         });
     </script>
+    <script type="text/javascript" src="js/css3-animate-it.js"></script>                        
+
 </body>
 </html> 

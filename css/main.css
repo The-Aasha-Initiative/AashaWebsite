@@ -73,13 +73,16 @@ canvas {
 
  #main-nav {
     font-size: 1.14em;
-    width: 46%;
     margin-left: auto; 
     margin-right: 0;
-    right: 1%; 
     margin-bottom: 10px;
     background-color: #ff8623; 
     color: #fff;
+}
+
+#main-nav .nav-link {
+    padding-right: 12px;
+    color: rgba(0, 0, 0, 0.80);
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
@@ -96,18 +99,18 @@ canvas {
 
 .main-btn {
     color: #fff;
-    background-color: #ff0125;
+    background-color: #f21f42;
     border-color: #ff0125;
 }
 
 .main-btn:hover {
     color: #222;
     background-color: #01ffdb;
-    border-color: #ff0125;
+    border-color: #f21f42;
 }
 
 .inverse-main-btn {
-    color: #ff0125;
+    color: #f21f42;
     background-color: #fff;
     border-color: #fff;    
 }
@@ -118,11 +121,11 @@ canvas {
 } 
 
 .aasha-red-bg {
-    background-color: #ff0125;
+    background-color: #f21f42;
 }
 
 .aasha-red-text {
-    color: #ff0125;
+    color: #f21f42;
 }
 
 /* BUTTONS, TEXT, BACKGROUND STYLES END */
@@ -266,7 +269,7 @@ canvas {
     margin: 30px auto 15px auto;
 }
 
-.grid-item > img { 
+.grid-container1 .grid-item > img { 
     display: block;
     object-fit: fill;
     max-width: 100%;
@@ -374,20 +377,37 @@ canvas {
 
 .grid-container-2 {
     display: grid;
-    grid-template-columns: 31.75% 31.75% 31.75%;
-    grid-template-rows: 50% 50%;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
     width: 60%;
-    grid-gap: 21px;
-    margin: 30px auto 15px auto;   
+    grid-gap: 20px;
+    margin: auto;   
 }
 
-.grid-container-2 > .grid-item {
+.grid-container-2 {
     margin-top: 130px;
 }
 
+.grid-container-2 .grid-item {
+    display: grid;
+    grid-template-areas: 
+        "blogs-img"
+        "blogs-text";
+    grid-template-rows: auto auto;
+    margin-bottom: 50px;
+}
+
+.blogs-img {
+    grid-area: blogs-img;
+}
+
+.blogs-text {
+    grid-area: blogs-text;
+}
+
 .grid-container-2 > .grid-item > img { 
-    height:33%;
-    width:100%;
+    height: 250px;
+    width: 100%;
 }
 
 .blogs-text {
@@ -489,6 +509,11 @@ i {
 .mr-right {
     margin-right: 22%;
 }
+
+.mr-right1 {
+    margin-right: 11%;
+}
+
 
 .mr-t {
     margin-top: 1.5em;
