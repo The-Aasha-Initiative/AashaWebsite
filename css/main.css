@@ -71,7 +71,7 @@ canvas {
              0.3em 0.3em 1em rgba(0,0,0,0.3);
 } 
 
- #main-nav {
+#main-nav {
     font-size: 1.14em;
     margin-left: auto; 
     margin-right: 0;
@@ -219,7 +219,7 @@ canvas {
     opacity:0.9;
     color: #ff0125;
     background-color: #222;
-    border:1px solid rgb(105, 105, 105);
+    border:1px solid #720101;
 }
   
 .footer-basic .copyright {
@@ -255,10 +255,6 @@ canvas {
 
 .navbar-border {
     border-bottom: 0.1em solid rgba(58, 44, 44, 0.164);  
-}
-
-.blog-header-image {
-
 }
 
 .grid-container1 {
@@ -459,16 +455,16 @@ i {
     text-decoration: none;
 }
 
-.ffa {
+.social-facebook {
     color: #3b5998;
 }
 
-.tfa {
+.social-twitter {
     color: #1da1f2;
 }
 
-.lfa {
-    color: #0a66c2;
+.social-linkedin {
+    color: #2867b2;
 }
 
 .content-img {
@@ -909,10 +905,6 @@ select
     color: #1877f2;
 }
 
-.social-lin {
-    color: #2867b2;
-}
-
 .social-in .fab {
     background: #d6249f;
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
@@ -1024,6 +1016,17 @@ video.is-loading {
     opacity: 0.4;
     pointer-events: none;
     border: 2px solid red;
+}
+
+.therapist-footer {
+    display: grid;
+    background-color: #38383b;
+    height: 75px;
+}
+
+.therapist-footer .copyright {
+    color: #fff;
+    margin-top: 31px;
 }
 
 /* PROFILE PAGE END */

@@ -136,9 +136,7 @@
 
     <div class="footer-basic therapist-footer animatedParent animateOnce" data-appear-top-offset='-129'>
         <footer>
-            
-            
-            <p class="copyright animated flip">© 2021 ALIGN</p>
+            <div class="t-footer-text"><p class="copyright animated flip">© 2021 ALIGN</p></div>
         </footer>
     </div>
     

@@ -24,7 +24,7 @@
         <div class="collapse navbar-collapse text-right flex-grow-1 mr-right" id="navbarNavAltMarkup">
             <div class="navbar-nav ms-auto me-5 flex-nowrap">
                 <a class="nav-link border-r" href="#">Find Therapists</a>
-                <a class="nav-link me-5 mr-right" href="#">For Professionals</a>
+                <a class="nav-link me-5 mr-right" href="for-professionals.html">For Professionals</a>
             </div>
         </div>
 
@@ -218,12 +218,12 @@
         <footer>
             
             <div class="social">
-                <a href="#" class="social-in"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/company/the-aasha-initiative/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/tryalign/" class="social-in" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/the-aasha-initiative/" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <!-- <a href="#"><i class="icon ion-social-twitter"></i></a>
                 <a href="#"><i class="icon ion-social-facebook"></i></a></div> -->
             
-            <p class="copyright">The Aasha Initiative © 2021</p>
+            <p class="copyright">ALIGN © 2021</p>
         </footer>
     </div>
 
