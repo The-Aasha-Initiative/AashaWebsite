@@ -257,7 +257,7 @@ canvas {
     border-bottom: 0.1em solid rgba(58, 44, 44, 0.164);  
 }
 
-.grid-container1 {
+.grid-container-1 {
     display: grid;
     width: 60%;
     grid-template-columns: repeat(3, 1fr);
@@ -265,7 +265,7 @@ canvas {
     margin: 30px auto 15px auto;
 }
 
-.grid-container1 .grid-item > img { 
+.grid-container-1 .grid-item > img { 
     display: block;
     object-fit: fill;
     max-width: 100%;
@@ -277,17 +277,17 @@ canvas {
     border: 0.5px solid #858585;
 }
 
-.grid-container1 > .grid-item {
+.grid-container-1 > .grid-item {
     position: relative;
     font-size: calc(1.3rem + 0.6vw);
 }
 
-.grid-container1 > .grid-item > img { 
+.grid-container-1 > .grid-item > img { 
     height:450px;
     width:100%;
 }
 
-.grid-container1 > .grid-item > .big-img-content {
+.grid-container-1 > .grid-item > .big-img-content {
     position: absolute; /* Position the background text */
     bottom: 0; /* At the bottom. Use top:0 to append it to the top */
     display: flex;
@@ -321,7 +321,7 @@ canvas {
     text-decoration: none;
 }
 
-.grid-container1 > .grid-item > .small-img-content {
+.grid-container-1 > .grid-item > .small-img-content {
     position: absolute; /* Position the background text */
     bottom: 0; /* At the bottom. Use top:0 to append it to the top */
     display: flex;
@@ -355,17 +355,17 @@ canvas {
     text-decoration: none;
 }
 
-.grid-container1 > .grid-item-1 {
+.grid-container-1 > .grid-item-1 {
     grid-column: 1 / span 2;
 }
   
-.grid-container1 > .grid-item-4 {
+.grid-container-1 > .grid-item-4 {
     grid-column: 2 / span 2;
 }
 
 @media (min-width: 768px) and (max-width: 1178px) {
 
-    .grid-container1 > .grid-item > h3{
+    .grid-container-1 > .grid-item > h3{
         font-size: calc(1.3rem + 0.3vw);
     }
     
@@ -1034,37 +1034,40 @@ video.is-loading {
 /* CHANGE LAYOUT FOR MOBILE DEVICES */
 
 @media (min-width: 320px) and (max-width: 768px) {
-    
     .row {   
       flex-direction: column;
     }
 
-    #pc-nav {
-        display: none;
-    }
-
-    #mobile-nav {
-        display: block;
-        margin-bottom: 2em;
-    }
-
-    #mobile-nav > .navbar {
+    .grid-container-1 { 
         width: 100%;
-        right: 0;
-        left: 0;
     }
 
+    .grid-container-1 .grid-item-1 {
+        grid-column: 1 / span 3;
+    }
+
+    .grid-container-1 .grid-item-2 {
+        grid-column: 1 / span 3;
+    }
+
+    .grid-container-1 .grid-item-3 {
+        grid-column: 1 / span 3;
+    }
+
+    .grid-container-1 .grid-item-4 {
+        grid-column: 1 / span 3;
+    }
+
+    .grid-container-2 {
+        grid-template-columns: auto;  
+        width: 100%;
+    }  
 }
 
 @media (min-width: 768px) {
-
     .row {   
         flex-direction: row;
-      }
-    
-    #mobile-nav {
-        display: none;
-    }  
+      }  
       
 }
 
