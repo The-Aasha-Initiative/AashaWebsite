@@ -19,20 +19,6 @@ function getSelectValue(val)
     });
 }
 
-// function getSelectValue2(val2)
-// {
-//     $.ajax({
-//         type: 'post',
-//         url: 'fetch_data.php',
-//         data: {
-//             get_idas:val2,
-//         },
-//         success: function (response) {
-//             document.getElementById("boxes").innerHTML=response; 
-//         }
-//     });
-// }
-
 $(".hiddenphone").hide();//hide the initial phone number
 
 $(".showphone").on("click", function (event) {

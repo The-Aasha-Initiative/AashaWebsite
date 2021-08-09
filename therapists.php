@@ -143,7 +143,6 @@
                     $_SESSION['location'] = $term;
                     
                     $query = "SELECT * FROM `therapists` AS `T` inner join `personal details` as `P` ON `T`.`Therapist ID` = `P`.`Therapist ID` WHERE `Location` LIKE '%".$term."%' ";
-                    //echo "<b> <center>Database Output</center> </b> <br> <br>";
 
                     if ($result = $mysqli->query($query)) {
                     
@@ -218,8 +217,8 @@
         <footer>
             
             <div class="social">
-                <a href="https://www.instagram.com/tryalign/" class="social-in" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/company/the-aasha-initiative/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/tryalign/" class="social-icons" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/the-aasha-initiative/" class="social-icons" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <!-- <a href="#"><i class="icon ion-social-twitter"></i></a>
                 <a href="#"><i class="icon ion-social-facebook"></i></a></div> -->
             

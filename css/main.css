@@ -225,7 +225,7 @@ canvas {
     display:inline-block;
     text-align:center;
     border-radius:50%;
-    border:1px solid #222;
+    border:1px solid #f21f42;
     margin:0 8px;
     opacity:1;
     background-color: #fff;
@@ -583,16 +583,8 @@ i {
     text-decoration: none;
 }
 
-.social-facebook {
-    color: #3b5998;
-}
-
-.social-twitter {
-    color: #1da1f2;
-}
-
-.social-linkedin {
-    color: #2867b2;
+.social-icons {
+    color: #f21f42;
 }
 
 .content-img {
@@ -1255,13 +1247,17 @@ video.is-loading {
 	margin: 0px 0px 25px 0px;
 }
 
-.fp-form label > span{
+.fp-form .label {
 	width: 156px;
 	font-weight: 500;
 	float: left;
 	padding-top: 8px;
 	padding-right: 5px;
 }
+
+.validation_error{
+    font-weight: 500;
+} 
 
 .fp-form span.required {
 	color:red;
@@ -1298,6 +1294,20 @@ video.is-loading {
 .fp-form .textarea-field:focus,  
 .fp-form .select-field:focus {
 	border: 1px solid #F21F42;
+}
+
+.fp-buttons {
+    padding-left: 156px;
+}
+
+.mandatory_text {
+    margin-left: 156px;
+    font-weight: 600;
+    font-style: italic;
+	border-bottom: 2px solid #ddd;
+	margin-bottom: 20px;
+	font-size: 18px;
+	padding-bottom: 3px;
 }
 
 /* FOR PROFESSIONALS PAGE END */

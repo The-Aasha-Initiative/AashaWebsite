@@ -40,19 +40,19 @@
     <div class="fp-form">
         <div class="fp-form-heading">Provide your information</div>
         <form action="" method="post" ng-app="myApp" ng-controller="validateCtrl" 
-        name="myForm"  method="post" novalidate>
+        name="myForm" novalidate>
             <label for="name">
-                <span>
+                <span class="label">
                     Name<span class="required">*</span>
                 </span>
                 <input type="text" class="input-field" name="name" placeholder="Enter your name" ng-model="name" required/>
                 <span style="color:red" ng-show="myForm.name.$dirty && myForm.name.$invalid">
-                    <span ng-show="myForm.name.$error.required">Name is required.</span>
+                    <span class="validation_error" ng-show="myForm.name.$error.required">Name is required.</span>
                 </span>
             </label>
 
             <label for="professional_title">
-                <span>Professional Title<span class="required">*</span></span>
+                <span class="label">Professional Title<span class="required">*</span></span>
                 
                 <select name="professional_title" class="select-field">
                     <option selected disabled>Choose your professional title</option>
@@ -63,28 +63,30 @@
             </label>
 
             <label for="qualifications">
-                <span>
+                <span class="label">
                     Qualifications<span class="required">*</span>
                 </span>    
                     <input type="text" class="input-field" name="qualifications" placeholder="Enter your qualification" ng-model="qualifications" required/>
                     <span style="color:red" ng-show="myForm.qualifications.$dirty && myForm.qualifications.$invalid">
-                        <span ng-show="myForm.qualifications.$error.required">Qualifications are required.</span>
+                        <span class="validation_error" ng-show="myForm.qualifications.$error.required">Qualifications are required.</span>
                     </span>
             </label>
 
+            <p class="mandatory_text">EMAIL ID is mandatory. Phone number and Instagram handle are optional.</p>
+
             <label for="email">
-                <span>
+                <span class="label">
                     Email ID<span class="required">*</span>
                 </span>
                 <input type="text" class="input-field" name="email" placeholder="Enter your email ID" ng-model="email"  ng-pattern="/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$/"required/>
                     <span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
-                        <span ng-show="myForm.email.$error.required">Email ID is required.</span>
-                        <span ng-show="myForm.email.$error.pattern">Invalid email ID</span>
-
+                        <span class="validation_error" ng-show="myForm.email.$error.required">Email ID is required.</span>
+                        <span class="validation_error" ng-show="myForm.email.$error.pattern">Invalid email ID</span>
+                    </span>    
             </label>
             
             <label for="phone">
-                <span>
+                <span class="label">
                     Phone
                 </span>
                 
@@ -94,12 +96,12 @@
             </label>
             
             <label for="instagramHandle">
-                <span>
+                <span class="label">
                     Instagram Handle
                 </span>
-                    <input type="text" class="input-field" name="instagramHandle" placeholder="Enter your instagramHandle" ng-model="instagramHandle" ng-pattern="/(http\:\/\/)?instagram\.com\/[a-z\d-_]{1,255}/i"/>
+                    <input type="text" class="input-field" name="instagramHandle" placeholder="Enter your Instagram Handle" ng-model="instagramHandle" >
                     <span style="color:red" ng-show="myForm.instagramHandle.$dirty && myForm.instagramHandle.$invalid">
-                        <span ng-show="myForm.instagramHandle.$error.pattern">Invalid instagram profile</span>
+                        <span ng-show="myForm.instagramHandle.$error.pattern">Invalid Instagram Handle</span>
                     </span>
             </label>
             <?php
@@ -109,46 +111,35 @@
                 $database = "aasha";
                 $mysqli = new mysqli("localhost", $username, $password, $database);
             
-          
-                // Taking all 5 values from the form data(input)
-                //$name = mysqli_real_escape_string($mysqli, $_REQUEST['first_name']);
-                $name = mysqli_real_escape_string($mysqli, $_POST['name']);
-                $professional = $mysqli -> real_escape_string($_REQUEST['professional_title']);
-                $qualifications = $mysqli -> real_escape_string($_REQUEST['qualifications']);
-                $phone = $mysqli -> real_escape_string($_REQUEST['phone']);
-                $instagramID = $mysqli -> real_escape_string($_REQUEST['instagramID']);
-                // $professional = $_REQUEST['professional_title'];
-                // $qualifications =  $_REQUEST['qualifications'];
-                // $phone = $_REQUEST['phone'];
-                // $instagramID = $_REQUEST['instagramID'];
-            
-                $sql = "INSERT INTO `therapists_contact_details` (name,professional_title,qualifications,number,instagramID)  VALUES ('$name', 
-                    '$professional','$qualifications',$phone,'$instagramID')";
+                if (isset($_POST['name'], $_POST['professional_title'], $_POST['qualifications'], $_POST['phone'], $_POST['instagramID'])) {
                 
-                if(mysqli_query($mysqli, $sql)){
-                    echo "<h3>data stored in a database successfully." 
-                        . " Please browse your localhost php my admin" 
-                        . " to view the updated data</h3>"; 
-                } else{
-                    echo "ERROR: Hush! Sorry $sql. " 
-                        . mysqli_error($mysqli);
+                    // Taking all 5 values from the form data(input)                    
+                    $name = mysqli_real_escape_string($mysqli, $_POST['name']);
+                    $professional = mysqli_real_escape_string($mysqli, $_POST['professional_title']);
+                    $qualifications = mysqli_real_escape_string($mysqli, $_POST['qualifications']);
+                    $phone = mysqli_real_escape_string($mysqli, $_POST['phone']);
+                    $instagramID = mysqli_real_escape_string($mysqli, $_POST['instagramID']);
+                   
+                    $sql = "INSERT INTO therapists_contact_details (name,professional_title,qualifications,number,instagramID)  VALUES (`$name`, 
+                        `$professional`,`$qualifications`,$phone,`$instagramID`)";
+                    
+                    if(mysqli_query($mysqli, $sql)){
+                        echo "<h3>data stored in a database successfully." 
+                            . " Please browse your localhost php my admin" 
+                            . " to view the updated data</h3>"; 
+                    } else{
+                        echo "ERROR: Hush! Sorry $sql. " 
+                            . mysqli_error($mysqli);
+                    }
+                    
+                    // Close connection
+                    mysqli_close($mysqli);
                 }
-                
-                // Close connection
-                mysqli_close($mysqli);
         ?>
-            <label>
-                <span>                     
-                </span>
-                <input class="btn main-btn btn-md" type="submit" value="Submit" />                
-            </label>
-
-            <label>
-                <span>                     
-                </span>
-                <button class="btn main-btn btn-md" type="reset" value="Reset"> Reset </button>
-            </label>
-            
+            <div class="fp-buttons">
+                <input class="btn main-btn btn-md" type="submit" value="Submit" />  
+                <button class="btn main-btn btn-md" type="reset" value="Reset"> Reset </button> 
+            </div>
         </form>
         <script>
             var app = angular.module('myApp', []);
@@ -169,8 +160,8 @@
         <footer>
             
             <div class="social">
-                <a href="https://www.instagram.com/tryalign/" class="social-in" target="_blank"><i class="fab fa-instagram" target="_blank"></i></a>
-                <a href="https://www.linkedin.com/company/the-aasha-initiative/" target="_blank" ><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/tryalign/" class="social-icons" target="_blank"><i class="fab fa-instagram" target="_blank"></i></a>
+                <a href="https://www.linkedin.com/company/the-aasha-initiative/" class="social-icons" target="_blank" ><i class="fab fa-linkedin"></i></a>
                 <!-- <a href="#"><i class="icon ion-social-twitter"></i></a>
                 <a href="#"><i class="icon ion-social-facebook"></i></a></div> -->
             
