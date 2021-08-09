@@ -24,7 +24,7 @@
         <div class="collapse navbar-collapse text-right flex-grow-1 mr-right" id="navbarNavAltMarkup">
             <div class="navbar-nav ms-auto me-5 flex-nowrap">
                 <a class="nav-link border-r" href="#">Find Therapists</a>
-                <a class="nav-link me-5 mr-right" href="for-professionals.html">For Professionals</a>
+                <a class="nav-link me-5 mr-right" href="for-professionals.php">For Professionals</a>
             </div>
         </div>
 
