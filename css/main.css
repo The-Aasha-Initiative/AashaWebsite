@@ -185,7 +185,7 @@ canvas {
 
 .footer-basic {
     padding:0 0 20px;
-    background-color:#f21f42;
+    background-color:#e4dedf;
     color:#4b4c4d;
 }
   
@@ -225,17 +225,17 @@ canvas {
     display:inline-block;
     text-align:center;
     border-radius:50%;
-    border:1px solid #f21f42;
+    border:1px solid #f8f9fa;
     margin:0 8px;
     opacity:1;
-    background-color: #fff;
+    background-color: #f8f9fa;
 }
   
 .footer-basic .social > a:hover {
     opacity:0.9;
-    color: #ff0125;
-    background-color: #222;
-    border:1px solid #720101;
+    color: #f8f9fa;
+    background-color: #F21F42;
+    border:1px solid #F21F42;
 }
   
 .footer-basic .copyright {
