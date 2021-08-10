@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 12, 2021 at 12:57 PM
+-- Generation Time: Aug 09, 2021 at 07:51 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -43,7 +43,8 @@ CREATE TABLE `personal details` (
 
 INSERT INTO `personal details` (`Therapist ID`, `Instagram Link`, `Linkedin Link`, `Phone Number`, `Aasha URL`, `Address`) VALUES
 (1001, 'https://www.ins', 'https://www.lin', 2147483647, '#', 'S-69,Tamil Nadu'),
-(1002, 'https://www.ins', 'https://www.lin', 2147483647, '#', 'Gurgaon');
+(1002, 'https://www.ins', 'https://www.lin', 2147483647, '#', 'Gurgaon'),
+(1003, 'https://www.ins', 'https://www.lin', 2145814818, '#', 'S1-999, Amritsar');
 
 -- --------------------------------------------------------
 
@@ -58,17 +59,41 @@ CREATE TABLE `therapists` (
   `Identifies As` char(25) COLLATE utf8_unicode_ci NOT NULL,
   `Client Group` char(100) COLLATE utf8_unicode_ci NOT NULL,
   `Languages` char(100) COLLATE utf8_unicode_ci NOT NULL,
-  `Issues Related` char(100) COLLATE utf8_unicode_ci NOT NULL,
-  `Location` char(20) COLLATE utf8_unicode_ci NOT NULL
+  `Issues Treated` char(100) COLLATE utf8_unicode_ci NOT NULL,
+  `Location` char(20) COLLATE utf8_unicode_ci NOT NULL,
+  `Intro` varchar(225) COLLATE utf8_unicode_ci NOT NULL,
+  `Image` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `therapists`
 --
 
-INSERT INTO `therapists` (`Therapist ID`, `Name`, `Designation`, `Identifies As`, `Client Group`, `Languages`, `Issues Related`, `Location`) VALUES
-(1001, 'Sreerag', 'Aasha CEO', 'Falcon', 'Dilshad Garden People', 'English', 'Mental Health', 'Delhi'),
-(1002, 'Kanishk', 'Web Developer', 'Fogripper', 'Kids', 'English', 'Website', 'Delhi');
+INSERT INTO `therapists` (`Therapist ID`, `Name`, `Designation`, `Identifies As`, `Client Group`, `Languages`, `Issues Treated`, `Location`, `Intro`, `Image`) VALUES
+(1001, 'Sreerag', 'Aasha CEO', 'Falcon', 'Dilshad Garden People', 'English', 'Mental Health', 'Delhi', 'Hello guys, I am a stand-up comic by profession and stream counter strike too.', 'images/sreerag.jpg'),
+(1002, 'Kanishk', 'Web Developer', 'Fogripper', 'Kids', 'English', 'Website', 'Delhi', '', 'images/kanishk.jpg\r\n'),
+(1003, 'Ishdeep', 'Doctor', 'Sasha', 'Children', 'English', 'Chronic Pain', 'Delhi', 'CS will always remain special for me. Busy ranking up IRL.', 'images/ishdeep.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `therapists_contact_details`
+--
+
+CREATE TABLE `therapists_contact_details` (
+  `name` varchar(20) NOT NULL,
+  `professional_title` varchar(20) NOT NULL,
+  `qualifications` varchar(20) NOT NULL,
+  `number` int(10) NOT NULL,
+  `instagramID` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `therapists_contact_details`
+--
+
+INSERT INTO `therapists_contact_details` (`name`, `professional_title`, `qualifications`, `number`, `instagramID`) VALUES
+('Kanishk', 'Counsellor', 'Btech', 2147483647, 'https://www.instagram.com/kanishk.grover/');
 
 --
 -- Indexes for dumped tables
@@ -90,6 +115,12 @@ ALTER TABLE `therapists`
   ADD UNIQUE KEY `Therapist ID_2` (`Therapist ID`);
 
 --
+-- Indexes for table `therapists_contact_details`
+--
+ALTER TABLE `therapists_contact_details`
+  ADD PRIMARY KEY (`number`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -97,13 +128,13 @@ ALTER TABLE `therapists`
 -- AUTO_INCREMENT for table `personal details`
 --
 ALTER TABLE `personal details`
-  MODIFY `Therapist ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1003;
+  MODIFY `Therapist ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1004;
 
 --
 -- AUTO_INCREMENT for table `therapists`
 --
 ALTER TABLE `therapists`
-  MODIFY `Therapist ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1003;
+  MODIFY `Therapist ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1004;
 
 --
 -- Constraints for dumped tables

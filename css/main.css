@@ -130,6 +130,7 @@ canvas {
     background-color: #fff;
     border-color: #fff;    
 }
+
 .inverse-main-btn:hover {
     color: #222;
     background-color: #01ffdb;
@@ -193,13 +194,13 @@ canvas {
 .footer-basic footer {
     display: grid;
     grid-template-areas: 
-        "blank socials"
+        "footer-links socials"
         "copyright copyright";
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 68% 32%;
 }
 
-.blank {
-    grid-area: blank;
+.footer-links {
+    grid-area: footer-links;
 }
   
 .footer-basic ul {
@@ -225,26 +226,42 @@ canvas {
 .footer-basic ul a:hover {
     opacity:1;
 }
+
+.footer-basic .footer-links {
+    display: grid;
+    align-items: start;
+    margin-top: 40px;
+    grid-template-columns: auto auto auto;
+    width: 60%;
+    justify-self: end;
+    font-size: 20px;
+}
+
+.footer-basic .footer-links a { 
+    text-decoration: none;
+    color: #f21f42; 
+}
   
-.footer-basic .social {
+.footer-basic .socials-icons {
     line-height: 1.75;
     padding-bottom:25px;
-    grid-area: socials;
+    grid-area: socials-icons;
+
 }
 
-.socials-icons {
-    place-self: center;
-}
+.socials {
+    place-items: start;  
+} 
 
-.s-text {
-    font-weight: 600;
+.socials-text {
+    font-weight: 800;
     color: #f21f42;
     font-size: 20px;
-    text-align: center;
-    margin: 20px auto 10px auto;
+    padding-left: 20px;
+    margin: 40px auto 10px auto;
 }
   
-.footer-basic .social > a {
+.footer-basic .socials-icons > a {
     font-size:24px;
     width:40px;
     height:40px;
@@ -257,7 +274,7 @@ canvas {
     background-color: #f8f9fa;
 }
   
-.footer-basic .social > a:hover {
+.footer-basic .socials-icons > a:hover {
     opacity:0.9;
     color: #f8f9fa;
     background-color: #F21F42;
@@ -268,7 +285,7 @@ canvas {
     margin-top:15px;
     text-align:center;
     font-size:16px;
-    color:#222;
+    color:rgba(34, 34, 34, 0.77);
     margin-bottom:0;
     grid-area: copyright;
 }
