@@ -187,6 +187,19 @@ canvas {
     padding:0 0 20px;
     background-color:#e4dedf;
     color:#4b4c4d;
+    font-family: 'League Spartan Bold', arial;
+}
+
+.footer-basic footer {
+    display: grid;
+    grid-template-areas: 
+        "blank socials"
+        "copyright copyright";
+    grid-template-columns: 50% 50%;
+}
+
+.blank {
+    grid-area: blank;
 }
   
 .footer-basic ul {
@@ -214,8 +227,21 @@ canvas {
 }
   
 .footer-basic .social {
-    text-align:center;
+    line-height: 1.75;
     padding-bottom:25px;
+    grid-area: socials;
+}
+
+.socials-icons {
+    place-self: center;
+}
+
+.s-text {
+    font-weight: 600;
+    color: #f21f42;
+    font-size: 20px;
+    text-align: center;
+    margin: 20px auto 10px auto;
 }
   
 .footer-basic .social > a {
@@ -244,6 +270,7 @@ canvas {
     font-size:16px;
     color:#222;
     margin-bottom:0;
+    grid-area: copyright;
 }
 
 /* FOOTER END */
