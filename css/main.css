@@ -28,7 +28,8 @@ body {
         -ms-user-select: none;
             user-select: none;
     overflow-x: hidden;
-    
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 canvas {
@@ -753,11 +754,9 @@ i {
     font-weight: 700;
     font-size: 20px;
     text-decoration: none;
+    font-family: 'Merienda', cursive;
 }
 
-.therapist-name:hover {
-    color: #f21f42;
-}
 
 #info > .location {
     -ms-flex-item-align: end;
@@ -1044,14 +1043,9 @@ select::-ms-expand
 }
 
 .services {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    margin: auto;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-   -ms-grid-column-align: start;
-       justify-self: start;
+    /* -ms-grid-row: 1;
+    -ms-grid-column: 1; */
+    margin: 36.5px auto auto auto;
     grid-area: services;
 }
 
@@ -1198,19 +1192,19 @@ select::-ms-expand
     text-align:center; 
     margin:auto; 
     white-space:nowrap; 
-    border:2px solid #222;
+
     padding:5px 11px 5px 11px;
-    border-radius: 5px;
+
 }
 
-.therapist-name h1:before, .therapist-name h1:after {
+/* .therapist-name h1:before, .therapist-name h1:after {
     background-color: #c50000;
     position:absolute; 
     content: '';
     height: 7px;
     width: 7px; border-radius:50%;
     bottom: 20px;
-}
+} */
 
 .therapist-name h1:before {
     left:-20px;
@@ -1414,4 +1408,65 @@ video.is-loading {
 /* CHANGE LAYOUT FOR MOBILE DEVICES END */
 
 
+.custom-carousel {
+    margin: 30px auto 30px auto;
+}
 
+.custom-carousel-text {
+    margin: auto;
+}
+
+/* #text1 {
+    visibility: visible;
+}
+
+#text2 {
+    display: none;    
+}
+
+#text3 {
+    display: none;     
+} */
+
+.t-footer footer {
+    display: grid;
+    grid-template-areas: 
+        "copyright";
+    grid-template-columns: 100%;
+}
+
+.d-about {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.d-about-text {
+    background-color: #eeddbd;
+    margin: 111px 89px 35px auto;
+    padding: 25px 35px 25px 35px;
+    -webkit-box-shadow: rgba(0,0,0,0.25) 0 3px 11px 0;
+    box-shadow: rgba(0,0,0,0.25) 0 3px 11px 0;
+    transform: translateX(-25px);
+}
+
+.d-about-header {
+    padding-left: 5px;
+    font-size: 62px;
+    font-weight: 600;
+}
+
+.d-about {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.d-about-para {
+    font-size: 18px;
+}
+
+.d-about-img img {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    overflow: hidden;
+}
