@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 09, 2021 at 07:51 PM
+-- Generation Time: Aug 17, 2021 at 07:55 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -21,6 +21,20 @@ SET time_zone = "+00:00";
 --
 -- Database: `aasha`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `new_joinees`
+--
+
+CREATE TABLE `new_joinees` (
+  `name` varchar(25) NOT NULL,
+  `role` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `phone` int(10) NOT NULL,
+  `linkedIn` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -98,6 +112,12 @@ INSERT INTO `therapists_contact_details` (`name`, `professional_title`, `qualifi
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `new_joinees`
+--
+ALTER TABLE `new_joinees`
+  ADD PRIMARY KEY (`phone`);
 
 --
 -- Indexes for table `personal details`

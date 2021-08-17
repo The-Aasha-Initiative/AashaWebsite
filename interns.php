@@ -8,14 +8,14 @@
     <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico"/>
     <link rel="stylesheet" href="css/fontawesome.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> 
-    <link rel="stylesheet" href="css/main.css"> 
+    <link rel="stylesheet" href="css/main.css">
     <link href="https://allfont.net/allfont.css?fonts=league-spartan" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <img id="blog-banner" src="images/For Therapists.png">
+    <img id="blog-banner" src="images/Join Us.png">
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top navbar-border nav-shadow">
             
@@ -25,17 +25,16 @@
         </button>
         <div class="collapse navbar-collapse text-right flex-grow-1 mr-right" id="navbarNavAltMarkup">
             <div class="navbar-nav ms-auto me-5 flex-nowrap">
-                <a class="nav-link border-r" href="therapists.php">Find Therapists</a>
-                <a class="nav-link me-5 mr-right" href="for-professionals.html">For Professionals</a>
-                
+                <a class="nav-link border-r" href="#">Careers</a>
+                <a class="nav-link me-5 mr-right" href="#">Volunteer As a Listener</a>
             </div>
         </div>
 
     </nav>
 
     <div class="t-header"> 
-        <h2 class="mt-5">You have the community's back, We have yours.</h2>
-        <h5 class="mt-3 mb-5">Curing the mind is tough enough, to be a techie, a marketing expert, data analyst and market strategist with that is, easier said than done.<br> Let us help you out with your online presence and all the boring and complex marketing related jargon while you focus on creating healthy minds <br> Reach out to us to get your free website and get listed, publish your writings and cases and more. Yes, its Free.<br> TO BE EDITED AND SIMPLIFIED FURTHER</h5>
+        <h2 class="mt-5">To be edited</h2>
+        <h5 class="mt-3 mb-5">Paragraph to be edited<br> 
     </div>
 
     <div class="fp-form">
@@ -52,28 +51,17 @@
                 </span>
             </label>
 
-            <label for="professional_title">
-                <span class="label">Professional Title<span class="required">*</span></span>
+            <label for="role">
+                <span class="label">Role<span class="required">*</span></span>
                 
-                <select name="professional_title" class="select-field">
-                    <option selected disabled>Choose your professional title</option>
-                    <option value="Psychiatrist">Psychiatrist</option>
-                    <option value="Counsellor">Counsellor</option>
-                    <option value="Psychologist">Psychologist</option>
+                <select name="role" class="select-field">
+                    <option selected disabled>Choose your preferred role</option>
+                    <option value="Web Developer">Web Developer</option>
+                    <option value="Content Editor">Content Editor</option>
                 </select>
             </label>
 
-            <label for="qualifications">
-                <span class="label">
-                    Qualifications<span class="required">*</span>
-                </span>    
-                    <input type="text" class="input-field" name="qualifications" placeholder="Enter your qualification" ng-model="qualifications" required/>
-                    <span style="color:red" ng-show="myForm.qualifications.$dirty && myForm.qualifications.$invalid">
-                        <span class="validation_error" ng-show="myForm.qualifications.$error.required">Qualifications are required.</span>
-                    </span>
-            </label>
-
-            <p class="mandatory_text">EMAIL ID is mandatory. Phone number and Instagram handle are optional.</p>
+            <!-- <p class="mandatory_text">EMAIL ID is mandatory. Phone number and Instagram handle are optional.</p> -->
 
             <label for="email">
                 <span class="label">
@@ -88,21 +76,23 @@
             
             <label for="phone">
                 <span class="label">
-                    Phone
+                    Phone<span class="required">*</span>
                 </span>
                 
-                <input type="number" class="tel-number-field" name="phone" placeholder="Enter your number" ng-model="phone"  ng-pattern="/^[7-9][0-9]{9}$/"/>
+                <input type="number" class="tel-number-field" name="phone" placeholder="Enter your number" ng-model="phone"  ng-pattern="/^[7-9][0-9]{9}$/" required/>
                 <span style="color:red" ng-show="myForm.phone.$dirty && myForm.phone.$invalid">
+                    <span class="validation_error" ng-show="myForm.phone.$error.required">Phone Number is required.</span>
                     <span ng-show="myForm.phone.$error.pattern">Invalid phone number</span>
             </label>
             
-            <label for="instagramHandle">
+            <label for="linkedIn">
                 <span class="label">
-                    Instagram Handle
+                    Linkedin URL<span class="required">*</span>
                 </span>
-                    <input type="text" class="input-field" name="instagramHandle" placeholder="Enter your Instagram Handle" ng-model="instagramHandle" ng-pattern="/(http://)?instagram.com/[a-z\d-_]{1,255}/i">
-                    <span style="color:red" ng-show="myForm.instagramHandle.$dirty && myForm.instagramHandle.$invalid">
-                        <span ng-show="myForm.instagramHandle.$error.pattern">Invalid Instagram Handle</span>
+                    <input type="text" class="input-field" name="linkedIn" placeholder="Enter your LinkedIn profile" ng-model="linkedIn" ng-pattern="/^(http(s)?://)?([\w]+.)?linkedin.com/(pub|in|profile)/" required>
+                    <span style="color:red" ng-show="myForm.linkedIn.$dirty && myForm.linkedIn.$invalid">
+                        <span class="validation_error" ng-show="myForm.linkedIn.$error.required">LinkedIn URL is required.</span>    
+                        <span ng-show="myForm.linkedIn.$error.pattern">Invalid LinkedIn URL</span>
                     </span>
             </label>
             <?php
@@ -112,17 +102,17 @@
                 $database = "aasha";
                 $mysqli = new mysqli("localhost", $username, $password, $database);
             
-                if (isset($_POST['name'], $_POST['professional_title'], $_POST['qualifications'], $_POST['phone'], $_POST['instagramID'])) {
+                if (isset($_POST['name'], $_POST['role'], $_POST['email'], $_POST['phone'], $_POST['linkedIn'])) {
                 
                     // Taking all 5 values from the form data(input)                    
                     $name = mysqli_real_escape_string($mysqli, $_POST['name']);
-                    $professional = mysqli_real_escape_string($mysqli, $_POST['professional_title']);
-                    $qualifications = mysqli_real_escape_string($mysqli, $_POST['qualifications']);
+                    $role = mysqli_real_escape_string($mysqli, $_POST['role']);
+                    $email = mysqli_real_escape_string($mysqli, $_POST['email']);
                     $phone = mysqli_real_escape_string($mysqli, $_POST['phone']);
-                    $instagramID = mysqli_real_escape_string($mysqli, $_POST['instagramID']);
+                    $linkedIn = mysqli_real_escape_string($mysqli, $_POST['linkedIn']);
                    
-                    $sql = "INSERT INTO therapists_contact_details (name,professional_title,qualifications,number,instagramID)  VALUES (`$name`, 
-                        `$professional`,`$qualifications`,$phone,`$instagramID`)";
+                    $sql = "INSERT INTO new_joinees (name,role,email,phone,linkedIn)  VALUES (`$name`, 
+                        `$role`,`$email`,$phone,`$linkedIn`)";
                     
                     if(mysqli_query($mysqli, $sql)){
                         echo "<h3>data stored in a database successfully." 
@@ -147,11 +137,11 @@
             app.controller('validateCtrl', function($scope) {
                 $scope.user = '';
                 $scope.phone = '';
-                $scope.instagramURL = '';
+                $scope.email = '';
+                $scope.linkedIn = '';
             });
             </script>
     </div>
-
 
     <div id="footer" style="position: relative; z-index: 9;">
         <img src="images/footer.png" class="img-fluid" id="footerbanner" alt="...">  
