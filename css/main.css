@@ -779,6 +779,10 @@ i {
             justify-content: space-between;
 }
 
+#dropdowns .select {
+    margin-top: 20px;
+}
+
 #info
 {   
     display: -ms-grid;   
@@ -1469,6 +1473,18 @@ video.is-loading {
         width: 100%;
         grid-template-rows: 60px 60px 60px;
     }
+
+    #dropdowns .select{
+        width: 80%;
+        margin: 20px auto ;
+    }
+
+    #boxes {
+        display: grid;
+        grid-template-columns: 90%;
+        justify-content: center;    
+    }
+
 }
 
 @media (min-width: 768px) {
