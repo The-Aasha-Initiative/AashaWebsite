@@ -91,7 +91,7 @@
                     Phone
                 </span>
                 
-                <input type="number" class="tel-number-field" name="phone" placeholder="Enter your number" ng-model="phone"  ng-pattern="/^[7-9][0-9]{9}$/"/>
+                <input type="number" class="tel-number-field" name="phone" placeholder="Enter your number" ng-model="phone"  ng-pattern="/^[7-9][0-9]{10}$/"/>
                 <span style="color:red" ng-show="myForm.phone.$dirty && myForm.phone.$invalid">
                     <span ng-show="myForm.phone.$error.pattern">Invalid phone number</span>
             </label>
@@ -100,7 +100,7 @@
                 <span class="label">
                     Instagram Handle
                 </span>
-                    <input type="text" class="input-field" name="instagramHandle" placeholder="Enter your Instagram Handle" ng-model="instagramHandle" ng-pattern="/(http://)?instagram.com/[a-z\d-_]{1,255}/i">
+                    <input type="text" class="input-field" name="instagram_handle" placeholder="Enter your Instagram Handle" ng-model="instagramHandle" ng-pattern="/(http://)?instagram.com/[a-z\d-_]{1,255}/i">
                     <span style="color:red" ng-show="myForm.instagramHandle.$dirty && myForm.instagramHandle.$invalid">
                         <span ng-show="myForm.instagramHandle.$error.pattern">Invalid Instagram Handle</span>
                     </span>
@@ -112,17 +112,18 @@
                 $database = "aasha";
                 $mysqli = new mysqli("localhost", $username, $password, $database);
             
-                if (isset($_POST['name'], $_POST['professional_title'], $_POST['qualifications'], $_POST['phone'], $_POST['instagramID'])) {
+                if (isset($_POST['name'], $_POST['professional_title'], $_POST['qualifications'], $_POST['email'], $_POST['phone'], $_POST['instagram_handle'])) {
                 
                     // Taking all 5 values from the form data(input)                    
                     $name = mysqli_real_escape_string($mysqli, $_POST['name']);
                     $professional = mysqli_real_escape_string($mysqli, $_POST['professional_title']);
                     $qualifications = mysqli_real_escape_string($mysqli, $_POST['qualifications']);
+                    $email = mysqli_real_escape_string($mysqli, $_POST['email']);
                     $phone = mysqli_real_escape_string($mysqli, $_POST['phone']);
-                    $instagramID = mysqli_real_escape_string($mysqli, $_POST['instagramID']);
+                    $instagram_handle = mysqli_real_escape_string($mysqli, $_POST['instagram_handle']);
                    
-                    $sql = "INSERT INTO therapists_contact_details (name,professional_title,qualifications,number,instagramID)  VALUES (`$name`, 
-                        `$professional`,`$qualifications`,$phone,`$instagramID`)";
+                    $sql = "INSERT INTO therapists_contact_details (name, professional_title, qualifications, email, phone, instagram_handle)  VALUES ('$name',  
+                        '$professional', '$qualifications', '$email', $phone, '$instagram_handle')";
                     
                     if(mysqli_query($mysqli, $sql)){
                         echo "<h3>data stored in a database successfully." 

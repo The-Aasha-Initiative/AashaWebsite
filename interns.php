@@ -111,8 +111,8 @@
                     $phone = mysqli_real_escape_string($mysqli, $_POST['phone']);
                     $linkedIn = mysqli_real_escape_string($mysqli, $_POST['linkedIn']);
                    
-                    $sql = "INSERT INTO new_joinees (name,role,email,phone,linkedIn)  VALUES (`$name`, 
-                        `$role`,`$email`,$phone,`$linkedIn`)";
+                    $sql = "INSERT INTO new_joinees (name, role, email, phone, linkedIn)  VALUES ('$name', 
+                        '$role','$email',$phone,'$linkedIn')";
                     
                     if(mysqli_query($mysqli, $sql)){
                         echo "<h3>data stored in a database successfully." 
