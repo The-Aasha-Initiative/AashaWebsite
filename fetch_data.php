@@ -29,9 +29,7 @@
 
 <?php
 
-
-if(isset($_POST['get_option']))
-{   session_start();
+   session_start();
     echo "<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>";
     
     $username = "root";
@@ -41,10 +39,14 @@ if(isset($_POST['get_option']))
     
     $mysqli = new mysqli("localhost", $username, $password, $database);
  
-    $state = $_POST['get_option'];
+    $state1 = $_POST['get_option1'];
+    $state2 = $_POST['get_option2'];
+    $state3 = $_POST['get_option3'];
+    $state4 = $_POST['get_option4'];
+    $state5 = $_POST['get_option5'];
     $loc = $_SESSION['location'];
 
-    $find="SELECT * FROM `therapists` AS `T` inner join `personal details` as `P` ON `T`.`Therapist ID` = `P`.`Therapist ID` WHERE(`Location` LIKE '%".$loc."%' AND  `Designation` LIKE '%".$state."%') OR (`Location` LIKE '%".$loc."%' AND  `Identifies As` LIKE '%".$state."%') OR (`Location` LIKE '%".$loc."%' AND  `Client Group` LIKE '%".$state."%') OR (`Location` LIKE '%".$loc."%' AND  `Languages` LIKE '%".$state."%') OR (`Location` LIKE '%".$loc."%' AND  `Issues Treated` LIKE '%".$state."%') OR (`Location` LIKE '%".$loc."%' AND  `Designation` LIKE '%".$state."%' AND  `Identifies As` LIKE '%".$state."%')";
+    $find="SELECT * FROM `therapists` AS `T` inner join `personal details` as `P` ON `T`.`Therapist ID` = `P`.`Therapist ID` WHERE(`Location` LIKE '%".$loc."%' AND  `Designation` LIKE '%".$state1."%' AND  `Identifies As` LIKE '%".$state2."%' AND  `Client Group` LIKE '%".$state3."%' AND  `Languages` LIKE '%".$state5."%'  AND  `Issues Treated` LIKE '%".$state4."%')";
     if ($result = $mysqli->query($find)) {
                     
         while ($row = $result->fetch_assoc()) {
@@ -61,8 +63,7 @@ if(isset($_POST['get_option']))
             $field11name = $row["Instagram Link"];
             $field12name = $row["Linkedin Link"];
             $field13name = $row["Aasha URL"];
-            $field14name = $row["Image"];
-
+            
             echo '<div id="profile-card">
             <div id="info">
                 <div class="name-desig-img">
@@ -102,7 +103,6 @@ if(isset($_POST['get_option']))
     /*freeresultset*/
     $result->free();
     }
-}
 
 ?>
 </body>

@@ -46,6 +46,7 @@
 
         
         <div id="dropdowns"> 
+        <form method="post">    
             <?php
                 session_start();
                 
@@ -59,7 +60,7 @@
                 {
 
                     echo '<div class="select">
-                                <select id="profession" name="profession" onchange="getSelectValue(this.value);">
+                                <select id="profession" name="profession" onchange="getSelectDesignation(this.value);">
                                 <option selected disabled>Filter by Profession</option> ';              
                     while ($row = $res->fetch_assoc()) {
                         echo "<option value='" . $row['Designation'] ."'>" . $row['Designation'] ."</option>";
@@ -74,7 +75,7 @@
                 if($res = $mysqli->query($ids))
                 {
                     echo '<div class="select">
-                                <select id="idas" name="idas" onchange="getSelectValue(this.value);">
+                                <select id="idas" name="idas" onchange="getSelectIdentifiesas(this.value);">
                                 <option selected disabled>Identifies as</option> ';              
                     while ($row = $res->fetch_assoc()) {
                         echo "<option value='" . $row['Identifies As'] ."'>" . $row['Identifies As'] ."</option>";
@@ -90,7 +91,7 @@
                 {
 
                     echo '<div class="select">
-                            <select id="clgr" name="clgr" onchange="getSelectValue(this.value);">
+                            <select id="clgr" name="clgr" onchange="getSelectClientGroup(this.value);">
                                 <option selected disabled>Client Group</option> ';
 
                     while ($row = $res->fetch_assoc()) {
@@ -106,7 +107,7 @@
                 {
 
                     echo '<div class="select">
-                             <select id="istr" name="istr" onchange="getSelectValue(this.value);">
+                             <select id="istr" name="istr" onchange="getSelectIssuesTreated(this.value);">
                                 <option selected disabled>Issues treated</option> ';
 
                     while ($row = $res->fetch_assoc()) {
@@ -122,7 +123,7 @@
                 {
 
                     echo '<div class="select">
-                             <select id="idas" name="lan" onchange="getSelectValue(this.value);">
+                             <select id="idas" name="lan" onchange="getSelectLanguages(this.value);">
                                 <option selected disabled>Languages</option> ';
 
                     while ($row = $res->fetch_assoc()) {
@@ -206,7 +207,8 @@
                     }   
                       
                     ?>
-                </div>    
+                 </form>    
+                </div>         
             
     </div>
 
