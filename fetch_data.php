@@ -36,7 +36,7 @@ if(isset($_POST['get_option']))
     
     $username = "root";
     $password = "";
-    $database = "aasha";
+    $database = "align";
     
     
     $mysqli = new mysqli("localhost", $username, $password, $database);
@@ -61,7 +61,8 @@ if(isset($_POST['get_option']))
             $field11name = $row["Instagram Link"];
             $field12name = $row["Linkedin Link"];
             $field13name = $row["Aasha URL"];
-            
+            $field14name = $row["Image"];
+
             echo '<div id="profile-card">
             <div id="info">
                 <div class="name-desig-img">

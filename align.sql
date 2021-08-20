@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 17, 2021 at 07:55 PM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.3.0
+-- Generation Time: Aug 20, 2021 at 02:23 PM
+-- Server version: 10.4.20-MariaDB
+-- PHP Version: 8.0.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -32,9 +31,16 @@ CREATE TABLE `new_joinees` (
   `name` varchar(25) NOT NULL,
   `role` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `phone` int(10) NOT NULL,
+  `phone` varchar(12) NOT NULL,
   `linkedIn` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `new_joinees`
+--
+
+INSERT INTO `new_joinees` (`name`, `role`, `email`, `phone`, `linkedIn`) VALUES
+('Sachin', 'Web Developer', 'sachinj28939@gmail.com', '9742485069', 'https://www.linkedin.com/in/sachin-jadhav-651a71127/');
 
 -- --------------------------------------------------------
 
@@ -95,19 +101,21 @@ INSERT INTO `therapists` (`Therapist ID`, `Name`, `Designation`, `Identifies As`
 --
 
 CREATE TABLE `therapists_contact_details` (
-  `name` varchar(20) NOT NULL,
-  `professional_title` varchar(20) NOT NULL,
-  `qualifications` varchar(20) NOT NULL,
-  `number` int(10) NOT NULL,
-  `instagramID` varchar(50) NOT NULL
+  `name` varchar(120) NOT NULL,
+  `professional_title` varchar(120) NOT NULL,
+  `qualifications` varchar(120) NOT NULL,
+  `email` varchar(120) NOT NULL,
+  `phone` varchar(12) NOT NULL,
+  `instagramHandle` varchar(120) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `therapists_contact_details`
 --
 
-INSERT INTO `therapists_contact_details` (`name`, `professional_title`, `qualifications`, `number`, `instagramID`) VALUES
-('Kanishk', 'Counsellor', 'Btech', 2147483647, 'https://www.instagram.com/kanishk.grover/');
+INSERT INTO `therapists_contact_details` (`name`, `professional_title`, `qualifications`, `email`, `phone`, `instagramHandle`) VALUES
+('Kanishk', 'Counsellor', 'Btech', '0', '2147483647', 'https://www.instagram.com/kanishk.grover/'),
+('Memento', 'Psychiatrist', 'MBBS', 'sachinj28939@gmail.com', '975506345', '@Memento_mori22');
 
 --
 -- Indexes for dumped tables
@@ -117,7 +125,7 @@ INSERT INTO `therapists_contact_details` (`name`, `professional_title`, `qualifi
 -- Indexes for table `new_joinees`
 --
 ALTER TABLE `new_joinees`
-  ADD PRIMARY KEY (`phone`);
+  ADD PRIMARY KEY (`email`);
 
 --
 -- Indexes for table `personal details`
@@ -138,7 +146,7 @@ ALTER TABLE `therapists`
 -- Indexes for table `therapists_contact_details`
 --
 ALTER TABLE `therapists_contact_details`
-  ADD PRIMARY KEY (`number`);
+  ADD PRIMARY KEY (`email`);
 
 --
 -- AUTO_INCREMENT for dumped tables

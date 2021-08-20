@@ -51,7 +51,7 @@
                 
                 $username = "root";
                 $password = "";
-                $database = "aasha";
+                $database = "align";
                 $mysqli = new mysqli("localhost", $username, $password, $database);
 
                 $sql = "SELECT DISTINCT `Designation` FROM `therapists`"; 

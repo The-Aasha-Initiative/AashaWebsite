@@ -99,7 +99,7 @@
             
                 $username = "root";
                 $password = "";
-                $database = "aasha";
+                $database = "align";
                 $mysqli = new mysqli("localhost", $username, $password, $database);
             
                 if (isset($_POST['name'], $_POST['role'], $_POST['email'], $_POST['phone'], $_POST['linkedIn'])) {
