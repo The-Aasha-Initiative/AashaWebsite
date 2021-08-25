@@ -45,8 +45,7 @@
     <div class="container-fluid" id="therapists-container">
 
         
-        <div id="dropdowns"> 
-        <form method="post">    
+        <div id="dropdowns">    
             <?php
                 session_start();
                 
@@ -54,18 +53,20 @@
                 $password = "";
                 $database = "align";
                 $mysqli = new mysqli("localhost", $username, $password, $database);
+                $flag=0;
 
                 $sql = "SELECT DISTINCT `Designation` FROM `therapists`"; 
                 if($res = $mysqli->query($sql))
                 {
 
                     echo '<div class="select">
-                                <select id="profession" name="profession" onchange="getSelectDesignation(this.value);">
-                                <option selected disabled>Filter by Profession</option> ';              
+                                <select id="profession" name="profession" onchange="getSelectedValue();">
+                                <option selected disabled></option> ';              
                     while ($row = $res->fetch_assoc()) {
                         echo "<option value='" . $row['Designation'] ."'>" . $row['Designation'] ."</option>";
                     }
-                    echo '      </select>
+                
+                    echo '   this.value    </select>
                           </div>';
                     $res->free();
                   
@@ -75,8 +76,8 @@
                 if($res = $mysqli->query($ids))
                 {
                     echo '<div class="select">
-                                <select id="idas" name="idas" onchange="getSelectIdentifiesas(this.value);">
-                                <option selected disabled>Identifies as</option> ';              
+                                <select id="idas" name="idas" onchange="getSelectedValue();">
+                                <option selected disabled></option> ';              
                     while ($row = $res->fetch_assoc()) {
                         echo "<option value='" . $row['Identifies As'] ."'>" . $row['Identifies As'] ."</option>";
                     }
@@ -91,8 +92,8 @@
                 {
 
                     echo '<div class="select">
-                            <select id="clgr" name="clgr" onchange="getSelectClientGroup(this.value);">
-                                <option selected disabled>Client Group</option> ';
+                            <select id="clgr" name="clgr" onchange="getSelectedValue();">
+                                <option selected disabled></option> ';
 
                     while ($row = $res->fetch_assoc()) {
                         echo "  <option value='" . $row['Client Group'] ."'>" . $row['Client Group'] ."</option>";
@@ -107,8 +108,8 @@
                 {
 
                     echo '<div class="select">
-                             <select id="istr" name="istr" onchange="getSelectIssuesTreated(this.value);">
-                                <option selected disabled>Issues treated</option> ';
+                             <select id="istr" name="istr" onchange="getSelectedValue();">
+                                <option selected disabled></option> ';
 
                     while ($row = $res->fetch_assoc()) {
                         echo "  <option value='" . $row['Issues Treated'] ."'>" . $row['Issues Treated'] ."</option>";
@@ -123,8 +124,8 @@
                 {
 
                     echo '<div class="select">
-                             <select id="idas" name="lan" onchange="getSelectLanguages(this.value);">
-                                <option selected disabled>Languages</option> ';
+                             <select id="lan" name="lan" onchange="getSelectedValue();">
+                                <option selected disabled></option> ';
 
                     while ($row = $res->fetch_assoc()) {
                         echo "  <option value='" . $row['Languages'] ."'>" . $row['Languages'] ."</option>";
@@ -207,7 +208,7 @@
                     }   
                       
                     ?>
-                 </form>    
+                 
                 </div>         
             
     </div>

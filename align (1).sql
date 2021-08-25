@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 20, 2021 at 02:23 PM
--- Server version: 10.4.20-MariaDB
--- PHP Version: 8.0.9
+-- Generation Time: Aug 25, 2021 at 07:01 PM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 7.3.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `aasha`
+-- Database: `align`
 --
 
 -- --------------------------------------------------------
@@ -75,11 +76,11 @@ INSERT INTO `personal details` (`Therapist ID`, `Instagram Link`, `Linkedin Link
 CREATE TABLE `therapists` (
   `Therapist ID` bigint(20) UNSIGNED NOT NULL,
   `Name` char(50) COLLATE utf8_unicode_ci NOT NULL,
-  `Designation` char(15) COLLATE utf8_unicode_ci NOT NULL,
-  `Identifies As` char(25) COLLATE utf8_unicode_ci NOT NULL,
-  `Client Group` char(100) COLLATE utf8_unicode_ci NOT NULL,
-  `Languages` char(100) COLLATE utf8_unicode_ci NOT NULL,
-  `Issues Treated` char(100) COLLATE utf8_unicode_ci NOT NULL,
+  `Designation` char(15) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `Identifies As` char(25) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `Client Group` char(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `Languages` char(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `Issues Treated` char(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `Location` char(20) COLLATE utf8_unicode_ci NOT NULL,
   `Intro` varchar(225) COLLATE utf8_unicode_ci NOT NULL,
   `Image` varchar(255) COLLATE utf8_unicode_ci NOT NULL
@@ -90,7 +91,7 @@ CREATE TABLE `therapists` (
 --
 
 INSERT INTO `therapists` (`Therapist ID`, `Name`, `Designation`, `Identifies As`, `Client Group`, `Languages`, `Issues Treated`, `Location`, `Intro`, `Image`) VALUES
-(1001, 'Sreerag', 'Aasha CEO', 'Falcon', 'Dilshad Garden People', 'English', 'Mental Health', 'Delhi', 'Hello guys, I am a stand-up comic by profession and stream counter strike too.', 'images/sreerag.jpg'),
+(1001, 'Sreerag', 'Aasha CEO', 'Falcon', 'Kids', 'English', 'Mental Health', 'Delhi', 'Hello guys, I am a stand-up comic by profession and stream counter strike too.', 'images/sreerag.jpg'),
 (1002, 'Kanishk', 'Web Developer', 'Fogripper', 'Kids', 'English', 'Website', 'Delhi', '', 'images/kanishk.jpg\r\n'),
 (1003, 'Ishdeep', 'Doctor', 'Sasha', 'Children', 'English', 'Chronic Pain', 'Delhi', 'CS will always remain special for me. Busy ranking up IRL.', 'images/ishdeep.jpg');
 
