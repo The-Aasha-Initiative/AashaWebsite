@@ -259,10 +259,9 @@ canvas {
 }
   
 .footer-basic .socials-icons {
-    line-height: 1.75;
+    line-height: 1.55;
     padding-bottom:25px;
     grid-area: socials-icons;
-
 }
 
 .socials {
@@ -1640,8 +1639,6 @@ video.is-loading {
     object-fit: cover;
     overflow: hidden;
 }
-
-
 
 .mas-header h2 {
     font-family: 'League-Spartan-Bold', arial;    
