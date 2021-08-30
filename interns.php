@@ -105,22 +105,25 @@
                 if (isset($_POST['name'], $_POST['role'], $_POST['email'], $_POST['phone'], $_POST['linkedIn'])) {
                 
                     // Taking all 5 values from the form data(input)                    
-                    $name = mysqli_real_escape_string($mysqli, $_POST['name']);
-                    $role = mysqli_real_escape_string($mysqli, $_POST['role']);
-                    $email = mysqli_real_escape_string($mysqli, $_POST['email']);
-                    $phone = mysqli_real_escape_string($mysqli, $_POST['phone']);
-                    $linkedIn = mysqli_real_escape_string($mysqli, $_POST['linkedIn']);
+                    $name = ($_POST['name']);
+                    $role = ($_POST['role']);
+                    $email = ($_POST['email']);
+                    $phone = ($_POST['phone']);
+                    $linkedIn = ($_POST['linkedIn']);
                    
-                    $sql = "INSERT INTO new_joinees (name, role, email, phone, linkedIn)  VALUES ('$name', 
-                        '$role','$email',$phone,'$linkedIn')";
-                    
-                    if(mysqli_query($mysqli, $sql)){
-                        echo "<h3>data stored in a database successfully." 
-                            . " Please browse your localhost php my admin" 
-                            . " to view the updated data</h3>"; 
-                    } else{
-                        echo "ERROR: Hush! Sorry $sql. " 
-                            . mysqli_error($mysqli);
+                    $sql = $mysqli->prepare("INSERT INTO new_joinees (name, role, email, phone, linkedIn)  VALUES (?,  
+                    ?, ?, ?, ?)");
+                    if (
+                        $sql &&
+                        $sql -> bind_param("sssss", $name, $role, $email, $phone, $linkedIn) &&
+                        $sql -> execute() &&
+                        $sql -> affected_rows === 1
+                    ) {
+                        echo "<div class='alert alert-success' role='alert'>
+                                  Thank you for providing your information! We will contact you shortly.
+                              </div>"; 
+                    } else {
+                        echo $mysqli -> error;
                     }
                     
                     // Close connection

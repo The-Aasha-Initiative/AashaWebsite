@@ -1029,6 +1029,10 @@ select option:disabled {
     color: #f1f1f1;
 }
 
+.fp-form select option:disabled {
+    color: rgb(17, 17, 17);
+}
+
 /* CUSTOM DROPDOWNS END*/
 
 .intro 

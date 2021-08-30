@@ -26,7 +26,7 @@
         <div class="collapse navbar-collapse text-right flex-grow-1 mr-right" id="navbarNavAltMarkup">
             <div class="navbar-nav ms-auto me-5 flex-nowrap">
                 <a class="nav-link border-r" href="therapists.php">Find Therapists</a>
-                <a class="nav-link me-5 mr-right" href="for-professionals.html">For Professionals</a>
+                <a class="nav-link me-5 mr-right" href="for-professionals.php">For Professionals</a>
                 
             </div>
         </div>
@@ -55,7 +55,7 @@
             <label for="professional_title">
                 <span class="label">Professional Title<span class="required">*</span></span>
                 
-                <select name="professional_title" class="select-field">
+                <select name="professional_title" class="select-field fp-form">
                     <option selected disabled>Choose your professional title</option>
                     <option value="Psychiatrist">Psychiatrist</option>
                     <option value="Counsellor">Counsellor</option>
@@ -115,23 +115,26 @@
                 if (isset($_POST['name'], $_POST['professional_title'], $_POST['qualifications'], $_POST['email'], $_POST['phone'], $_POST['instagramHandle'])) {
                 
                     // Taking all 5 values from the form data(input)                    
-                    $name = mysqli_real_escape_string($mysqli, $_POST['name']);
-                    $professional = mysqli_real_escape_string($mysqli, $_POST['professional_title']);
-                    $qualifications = mysqli_real_escape_string($mysqli, $_POST['qualifications']);
-                    $email = mysqli_real_escape_string($mysqli, $_POST['email']);
-                    $phone = mysqli_real_escape_string($mysqli, $_POST['phone']);
-                    $instagram_handle = mysqli_real_escape_string($mysqli, $_POST['instagramHandle']);
+                    $name = ($_POST['name']);
+                    $professional = ($_POST['professional_title']);
+                    $qualifications = ($_POST['qualifications']);
+                    $email = ($_POST['email']);
+                    $phone = ($_POST['phone']);
+                    $instagram_handle = ($_POST['instagramHandle']);
                    
-                    $sql = "INSERT INTO therapists_contact_details (name, professional_title, qualifications, email, phone, instagramHandle)  VALUES ('$name',  
-                        '$professional', '$qualifications', '$email', $phone, '$instagram_handle')";
-                    
-                    if(mysqli_query($mysqli, $sql)){
-                        echo "<h3>data stored in a database successfully." 
-                            . " Please browse your localhost php my admin" 
-                            . " to view the updated data</h3>"; 
-                    } else{
-                        echo "ERROR: Hush! Sorry $sql. " 
-                            . mysqli_error($mysqli);
+                    $sql = $mysqli->prepare("INSERT INTO therapists_contact_details (name, professional_title, qualifications, email, phone, instagramHandle)  VALUES (?,  
+                        ?, ?, ?, ?, ?)");
+                    if (
+                        $sql &&
+                        $sql -> bind_param("ssssss", $name, $professional, $qualifications, $email, $phone, $instagram_handle) &&
+                        $sql -> execute() &&
+                        $sql -> affected_rows === 1
+                    ) {
+                        echo "<div class='alert alert-success' role='alert'>
+                                  Thank you for providing your information! We will contact you shortly.
+                              </div>"; 
+                    } else {
+                        echo $mysqli -> error;
                     }
                     
                     // Close connection
