@@ -137,7 +137,7 @@ canvas {
 
 .main-btn:hover {
     color: #fff;
-    background-color: #6466E7;
+    background-color: #6466e7;
     border-color: #007CEF;
 }
 
@@ -813,8 +813,8 @@ i {
 #boxes {
     display: -ms-grid;
     display: grid;
-    grid-auto-columns: 1fr;
-  grid-auto-flow: column;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 25px;
 }
 
