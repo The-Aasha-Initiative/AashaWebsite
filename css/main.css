@@ -857,12 +857,19 @@ i {
     padding: 1.5em;
 }
 
-.therapist-name {
+.therapist-container .therapist-name {
     color: rgba(0, 0, 0, 0.75);
     font-weight: 700;
     font-size: 20px;
     text-decoration: none;
     font-family: 'Merienda', cursive;
+}
+
+.therapist-name1 {
+    color: rgba(0, 0, 0, 0.75);
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none;
 }
 
 #info > .location {
@@ -890,8 +897,11 @@ i {
 }
 
 .t-links i {
-    font-size: 29px;
-    
+    font-size: 26px;  
+}
+
+.t-socials a {
+    position:relative;
 }
 
 #t-socials 
@@ -899,8 +909,8 @@ i {
     display: -ms-grid;
     display: grid;
     font-size: 25px;
-    -ms-grid-columns: 60px 9px 35px 9px 35px;
-        grid-template-columns: 60px 9px 35px 9px 35px;
+    -ms-grid-columns: 68px 35px 35px;
+        grid-template-columns: 68px 35px 35px;
     
 }
 
@@ -910,13 +920,28 @@ i {
         align-self: center;
     -ms-grid-column-align: center;
         justify-self: center;
+        
 }
 
-.tp {
-    font-size: 21px;
+.tli1 {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+        border-right: 2px solid rgba(255, 250, 250, 0.85);
+        padding-right: 5px;
+        padding-left: 5px;     
+}
+
+.tp {
+    font-size: 17px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    border-right: 2px solid rgba(255, 250, 250, 0.85);
+    margin-right: 2px;
+    text-transform: uppercase;
 }
 
 #boxes > #profile-card > #links > #t-socials > a > i {
@@ -1063,6 +1088,7 @@ select option:disabled {
     -ms-grid-column-align: end;
         justify-self: end;
 }
+
 
 /* THERAPISTS PAGE END */
 
