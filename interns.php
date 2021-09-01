@@ -82,7 +82,7 @@
                 <input type="number" class="tel-number-field" name="phone" placeholder="Enter your number" ng-model="phone"  ng-pattern="/^[7-9][0-9]{9}$/" required/>
                 <span style="color:red" ng-show="myForm.phone.$dirty && myForm.phone.$invalid">
                     <span class="validation_error" ng-show="myForm.phone.$error.required">Phone Number is required.</span>
-                    <span ng-show="myForm.phone.$error.pattern">Invalid phone number</span>
+                    <span class="validation_error" ng-show="myForm.phone.$error.pattern">Invalid phone number</span>
             </label>
             
             <label for="linkedIn">
@@ -92,7 +92,7 @@
                     <input type="text" class="input-field" name="linkedIn" placeholder="Enter your LinkedIn profile" ng-model="linkedIn" ng-pattern="/^(http(s)?://)?([\w]+.)?linkedin.com/(pub|in|profile)/" required>
                     <span style="color:red" ng-show="myForm.linkedIn.$dirty && myForm.linkedIn.$invalid">
                         <span class="validation_error" ng-show="myForm.linkedIn.$error.required">LinkedIn URL is required.</span>    
-                        <span ng-show="myForm.linkedIn.$error.pattern">Invalid LinkedIn URL</span>
+                        <span class="validation_error" ng-show="myForm.linkedIn.$error.pattern">Invalid LinkedIn URL</span>
                     </span>
             </label>
             <?php
