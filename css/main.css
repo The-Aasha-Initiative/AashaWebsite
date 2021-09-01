@@ -428,16 +428,27 @@ canvas {
     width:100%;
 }
 
+.grid-container-1 a {
+    font-family: 'Amiko', sans-serif;
+}
+
+.line-break {
+    width: 100%;
+  }
+
 .grid-container-1 > .grid-item > .big-img-content {
     position: absolute; /* Position the background text */
     bottom: 0; /* At the bottom. Use top:0 to append it to the top */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 5% 15% 5% 5%;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: end; 
+    flex-wrap: wrap; 
+    /* flex-direction: row;  */
+    gap: 5px;              
+    padding: 35% 15% 15% 5%;
     background: rgb(0, 0, 0); /* Fallback color */
     background: -webkit-gradient(
     linear,
@@ -512,9 +523,12 @@ canvas {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 5% 15% 5% 5%;
+    -ms-flex-align: center;
+    align-items: center;
+    flex-direction: row; 
+    flex-wrap: wrap;  
+    gap: 5px;     
+    padding: 62% 15% 5% 5%;
     background: rgb(0, 0, 0); /* Fallback color */
     background: -webkit-gradient(
     linear,
@@ -594,6 +608,12 @@ canvas {
         grid-column: 2 / span 2;
 }
 
+.grid-container-1 .grid-item p {
+    font-size: 14px;
+    display: block;
+    font-weight: 400;
+}
+
 @media (min-width: 768px) and (max-width: 1178px) {
 
     .grid-container-1 > .grid-item > h3{
@@ -667,7 +687,7 @@ canvas {
 
 .author-name {
     text-decoration: none;
-    color: #599297;
+    color: #6466E7;
     font-weight: 400;
     font-style: normal;
 }
@@ -697,6 +717,14 @@ canvas {
     -ms-grid-column-align: end;
         justify-self: end;
     font-size: 21px;
+}
+
+.author-socials a i {
+    color: #f21f42;
+}
+
+.author-socials a i:hover {
+    color: #6466E7;
 }
 
 i {
@@ -1704,3 +1732,8 @@ video.is-loading {
 .mas-text1 {
     padding-right: 25px;
 }
+
+.date-readtime p {
+    display: inline-block;
+}
+
