@@ -666,19 +666,38 @@ canvas {
     grid-area: blogs-text;
 }
 
-.grid-container-2 > .grid-item > img { 
+.grid-container-2 .grid-item img { 
     height: 250px;
     width: 100%;
+}
+
+.blogs-header {
+    font-weight: 600;
+    line-height: 1.2;
+    font-size: 1.75rem;
+    text-decoration: none;
+    color: #212529;
+    margin-bottom: 6px;
+}
+
+.blogs-header:hover {
+    color: #23282c;    
+}
+
+.grid-container-2 .grid-item a {
+    display: inline-block;
+
 }
 
 .blogs-text {
     padding-top: 15px;
 }
 
-.blogs-sub-header {
+.blogs-sub-header a {
     font-size: 18px;
-    color: rgba(0,0,0,.54);
-    fill: rgba(0,0,0,.54);
+    color: rgba(0,0,0,.64);
+    fill: rgba(0,0,0,.64);
+    text-decoration: none;
 }
 
 .blogs-author {
