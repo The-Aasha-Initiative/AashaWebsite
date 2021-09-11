@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,16 +7,15 @@
     <title>Align</title>
     <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico"/>
     <link rel="stylesheet" href="css/fontawesome.css">
+    <link href="https://allfont.net/allfont.css?fonts=league-spartan" rel="stylesheet" type="text/css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
-      
+    <canvas id='c' width="100%" height="35%"></canvas>  
     <div id="banner">
-        <canvas id='c' width="100%" height="35%"></canvas>  
+          
         <img src="images/Main Banner.png" class="img-fluid" id="cover" alt="..."> 
         
         <img src="images/logo.png"  id="logo" alt="...">
@@ -30,8 +29,8 @@
                 <div class="collapse navbar-collapse text-right flex-grow-1 mr-right1" id="navbarNavAltMarkup">
                     <div class="navbar-nav ms-auto me-5 flex-nowrap align-items-end">
                         <a class="nav-link" href="therapists.php">Find Therapists</a>
-                        <a class="nav-link" href="blogs.html">Community Content</a>
-                        <a class="nav-link me-5" href="interns.php">Join us</a>
+                        <a class="nav-link" href=>Resources</a>
+                        <a class="nav-link me-5" href="blogs.html">Community Content</a>
                     </div>
                 </div>
             </nav>
@@ -39,15 +38,15 @@
            
     </div>
     
-    <div class="container-fluid px-5 pt-1 " id="content" style="position: relative; z-index: 9;">
+    <div class="container-fluid px-5 pt-1" id="content" style="position: relative; z-index: 9;">
         <div class="row gx-1">
-            <div class="col" >
+            <div class="col">
                 <div>
                     <div class="p-5 mb-4 aasha-red-bg rounded-3">
-                        <div class="container-fluid py-5 animatedParent animateOnce" data-sequence='250' data-appear-top-offset='-337'>
-                            <h1 class="display-5 fw-bold animated fadeInLeftShort" data-id='1'>About Align</h1>
-                            <p class="fs-4 text-white animated fadeInLeftShort" data-id='2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at leo lobortis, luctus dui a, gravida orci. Pellentesque bibendum leo quis leo rutrum faucibus. Aenean facilisis pharetra lorem, non porta ipsum imperdiet in. Etiam vel suscipit felis, eget ultricies augue. Aenean libero justo, malesuada ac libero sed, tincidunt cursus orci. Suspendisse iaculis commodo eleifend. Aliquam.</p>
-                            <a href="more-about-us.html" class="btn inverse-main-btn btn-lg animated fadeInLeftShort" data-id='3'>More about us</a>
+                        <div class="container-fluid py-5">
+                            <h1 class="display-5 fw-bold">About Align</h1>
+                            <p class="fs-4 text-white">(Draft to be refined) Everything Mental Health. You can access our search engine to browse Mental Health Professionals. If you are distressed or want immediate emotional support access our comprehensive list of emotional distress/suicide list hotlines. Browse through our community content (writings/music/art) to unlock your creativity. You can start now, try to draw on the canvas above!</p>
+                            <a href="more-about-us.html" class="btn inverse-main-btn btn-lg">More about us</a>
                             <!-- <a href="for-professionals.php" class="btn inverse-main-btn btn-lg">For Therapists</a>
                             <a href="interns.html" class="btn inverse-main-btn btn-lg">For Volunteers</a>
                             <a href="content_creators.html" class="btn inverse-main-btn btn-lg">For Content Creators</a> -->
@@ -59,25 +58,25 @@
             
                 <div>
                     <div class="p-5 mb-4 rounded-3">
-                        <div class="container-fluid py-5 animatedParent animateOnce" data-appear-top-offset='-337' data-sequence='250'>
-                            <h1 class="display-5 fw-bold aasha-red-text animated fadeInLeftShort" data-id='1'>Support Group</h1>
-                            <p class="col-md-8 fs-4 animated fadeInLeftShort" data-id='2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at leo lobortis, luctus dui a, gravida orci. Pellentesque bibendum leo quis leo rutrum faucibus.</p>
-                            <a href="support-group.html" class="btn main-btn btn-lg animated fadeInLeftShort" data-id='3'>Find out more</a>                        
+                        <div class="container-fluid py-5">
+                            <h1 class="display-5 fw-bold aasha-red-text">Support Group</h1>
+                            <p class="col-md-8 fs-4">(Draft to be refined) Looking to surround yourself with like minded people? come hang out in __link? webinars activities etc. Discuss pciture with sachin!</p>
+                            <a href="support-group.html" class="btn main-btn btn-lg">Find out more</a>                        
                         </div>
                     </div>
                 </div>
 
                 <hr>
 
-                <div>
+                <!--<div>
                     <div class="p-5 mb-4 rounded-3">
-                        <div class="container-fluid py-5 animatedParent animateOnce" data-appear-top-offset='-337' data-sequence='250'>
-                            <h1 class="display-5 fw-bold animated fadeInLeftShort" data-id='1'>Psych, Resources and Other Stuff</h1>
-                            <p class="col-md-8 fs-4 animated fadeInLeftShort" data-id='2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at leo lobortis, luctus dui a, gravida orci. Pellentesque bibendum leo quis leo rutrum faucibus. Aenean facilisis pharetra lorem, non porta ipsum imperdiet in. Etiam vel suscipit felis, eget ultricies augue. Aenean libero justo, malesuada ac libero sed, tincidunt cursus orci. Suspendisse iaculis commodo eleifend. Aliquam.</p>
-                            <!-- <button class="btn btn-primary btn-lg" type="button">Want to know more about us?</button> -->
+                        <div class="container-fluid py-5">
+                            <h1 class="display-5 fw-bold">Psych, Resources and Other Stuff</h1>
+                            <p class="col-md-8 fs-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at leo lobortis, luctus dui a, gravida orci. Pellentesque bibendum leo quis leo rutrum faucibus. Aenean facilisis pharetra lorem, non porta ipsum imperdiet in. Etiam vel suscipit felis, eget ultricies augue. Aenean libero justo, malesuada ac libero sed, tincidunt cursus orci. Suspendisse iaculis commodo eleifend. Aliquam.</p>
+                             <button class="btn btn-primary btn-lg" type="button">Want to know more about us?</button> 
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
 
           <div class="col-1">  
@@ -85,35 +84,29 @@
 
           <div class="col" id="feed">
 
-            <div class="feedposts" >
-                <img src="images/blog1.jpg" class="img-thumbnail feed-image" id="" alt="..." >
-                <div class="animatedParent animateOnce" data-appear-top-offset='-337' data-sequence='250'>   
-                    <p class="fs-6 blog-author animated fadeInRightShort" data-id='1'> Memento | June 6th, 2021 | 2 min read </p>
-                    <h3 class="animated fadeInRightShort" data-id='2'>Lorem ipsum dolor sit amet</h3>
-                    <p class="fs-5 blog-text animated fadeInRightShort" data-id='3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at leo lobortis, luctus dui a, gravida orci. </p>
-                    <a href="#" class="btn main-btn btn-lg animated fadeInRightShort" data-id='4'>Read More</a>
-                </div>
+            <div class="feedposts">
+                <img src="images/blog1.jpg" class="img-thumbnail feed-image"" id=" alt="...">
+                <p class="fs-6 blog-author"> Memento | June 6th, 2021 | 2 min read </p>
+                <h3>Lorem ipsum dolor sit amet</h3>
+                <p class="fs-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at leo lobortis, luctus dui a, gravida orci.</p>
+                <a href="#" class="btn main-btn btn-lg">Read More</a>
             </div>  
            
-            <div class="feedposts" >
-                <img src="images/blog2.jpg" class="img-thumbnail feed-image" id="" alt="..." >
-                <div class="animatedParent animateOnce" data-appear-top-offset='-337' data-sequence='250'>   
-                    <p class="fs-6 blog-author animated fadeInRightShort" data-id='1'> Memento | June 6th, 2021 | 2 min read </p>
-                    <h3 class="animated fadeInRightShort" data-id='2'>Lorem ipsum dolor sit amet</h3>
-                    <p class="fs-5 blog-text animated fadeInRightShort" data-id='3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at leo lobortis, luctus dui a, gravida orci. </p>
-                    <a href="#" class="btn main-btn btn-lg animated fadeInRightShort" data-id='4'>Read More</a>
-                </div>
-            </div>   
+            <div class="feedposts">
+                <img src="images/blog2.jpg" class="img-thumbnail feed-image" id="" alt="...">
+                <p class="fs-6 blog-author"> Memento | June 6th, 2021 | 2 min read </p>
+                <h3>Lorem ipsum dolor sit amet</h3>
+                <p class="fs-5 blog-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at leo lobortis, luctus dui a, gravida orci. </p>
+                <a href="#" class="btn main-btn btn-lg">Read More</a>
+            </div>  
             
-            <div class="feedposts" >
-                <img src="images/blog3.jpg" class="img-thumbnail feed-image" id="" alt="..." >
-                <div class="animatedParent animateOnce" data-appear-top-offset='-337' data-sequence='250'>   
-                    <p class="fs-6 blog-author animated fadeInRightShort" data-id='1'> Memento | June 6th, 2021 | 2 min read </p>
-                    <h3 class="animated fadeInRightShort" data-id='2'>Lorem ipsum dolor sit amet</h3>
-                    <p class="fs-5 blog-text animated fadeInRightShort" data-id='3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at leo lobortis, luctus dui a, gravida orci. </p>
-                    <a href="#" class="btn main-btn btn-lg animated fadeInRightShort" data-id='4'>Read More</a>
-                </div>
-            </div>   
+            <div class="feedposts">
+                <img src="images/blog3.jpg" class="img-thumbnail feed-image" id="" alt="...">
+                <p class="fs-6 blog-author"> Memento | June 6th, 2021 | 2 min read </p>
+                <h3>Lorem ipsum dolor sit amets</h3>
+                <p class="fs-5 blog-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at leo lobortis, luctus dui a, gravida orci.</p>
+                <a href="#" class="btn main-btn btn-lg">Read More</a>
+            </div>  
     
           </div>
         </div>
@@ -143,10 +136,10 @@
     </div>
 
 
-    <script src="js/dat.gui.js"></script>
-    <script src="js/brush.js"></script>
-    <script type="text/javascript" src="js/css3-animate-it.js"></script>                        
-
+    <script src="js/dat.gui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/brush.js"></script>
+    
 
 </body>
 </html>

@@ -154,7 +154,7 @@
         <footer>
             <div class="footer-links">
                 <div><a href="for-professionals.php">For Therapists</a></div>
-                <div><a href="interns.html">For Volunteers</a></div>
+                <div><a href="interns.php">For Volunteers</a></div>
                 <div><a href="content_creators.html">For Content Creators</a></div>
             </div>
             <div class="socials">
