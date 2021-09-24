@@ -13,6 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> 
     <link rel="stylesheet" href="css/main.css"> 
     <link href="https://allfont.net/allfont.css?fonts=league-spartan" rel="stylesheet" type="text/css" />
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 <body>
     <img id="blog-banner" src="images/For Therapists.png">
@@ -195,7 +196,7 @@
                 }
         ?>
             <div class="fp-buttons">
-                <input class="btn main-btn btn-md" type="submit" value="Submit" />  
+                <input class="btn main-btn btn-md g-recaptcha" data-sitekey="6LcPAnQcAAAAAN37iufYrO2ydZGvKeDzd3S0ji0T" data-callback='onSubmit' data-action='submit' type="submit" value="Submit" />  
                 <button class="btn main-btn btn-md" type="reset" value="Reset"> Reset </button> 
             </div>
         </form>
@@ -210,7 +211,7 @@
     </div>
 
 
-    <div id="footer" style="position: relative; z-index: 9;">
+    <div id="footer">
         <img src="images/footer.png" class="img-fluid" id="footerbanner" alt="...">  
     </div>
 
@@ -230,7 +231,8 @@
             </div>
             <div class="copyright">ALIGN © 2021</div>
         </footer>
-    </div>                      
+    </div>  
+    <script src="js/main.js"></script>                    
                             
 </body>
 </html>

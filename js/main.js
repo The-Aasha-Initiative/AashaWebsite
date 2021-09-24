@@ -28,3 +28,7 @@ $(document).ready(function(){
 		interval : false
 	});
 });
+
+function onSubmit(token) {
+    document.getElementsByClassName("fp-form").submit();
+}
