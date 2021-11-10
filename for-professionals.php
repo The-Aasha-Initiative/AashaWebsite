@@ -196,7 +196,7 @@
                 }
         ?>
             <div class="fp-buttons">
-                <input class="btn main-btn btn-md" type="submit" value="Submit" />  
+                <input class="btn main-btn btn-md g-recaptcha" data-sitekey="6LcPAnQcAAAAAN37iufYrO2ydZGvKeDzd3S0ji0T" data-callback='onSubmit' data-action='submit' type="submit" value="Submit" />  
                 <button class="btn main-btn btn-md" type="reset" value="Reset"> Reset </button> 
             </div>
         </form>

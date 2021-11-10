@@ -46,7 +46,6 @@
                 $database = "align";
                 $mysqli = new mysqli("localhost", $username, $password, $database);
 
-
                 $sql = "SELECT DISTINCT `location` FROM `hotlines` ORDER BY `location`"; 
                 if($res = $mysqli->query($sql))
                 {
