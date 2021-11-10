@@ -28,3 +28,16 @@ $(document).ready(function(){
 		interval : false
 	});
 });
+
+function onSubmit(token) {
+    document.getElementsByClassName("myFormFP").submit();
+}
+
+$(document).ready(function(){
+    $('#location-hl').on('change', function(){
+        var selectvalue = $(this).val(); 
+        $(".hotlines-container > hr").hide();
+        $(".hotlines-container > div").addClass('hidden-hotlines');
+        $("#"+selectvalue).removeClass('hidden-hotlines')();
+    });
+});

@@ -58,7 +58,7 @@
                 {
 
                     echo '<div class="select">
-                                <select id="profession" name="profession" onchange="getSelectedValue();">
+                                <select id="profession" name="profession" onchange="getSelectedValue(); autocomplete="off"">
                                 <option value="" selected disabled>Filter by Profession</option> ';              
                     while ($row = $res->fetch_assoc()) {
                         echo "<option value='" . $row['Designation'] ."'>" . $row['Designation'] ."</option>";
@@ -74,7 +74,7 @@
                 if($res = $mysqli->query($ids))
                 {
                     echo '<div class="select">
-                                <select id="idas" name="idas" onchange="getSelectedValue();">
+                                <select id="idas" name="idas" onchange="getSelectedValue(); autocomplete="off"">
                                 <option value="" selected disabled>Identifies as</option> ';              
                     while ($row = $res->fetch_assoc()) {
                         echo "<option value='" . $row['Identifies As'] ."'>" . $row['Identifies As'] ."</option>";
@@ -90,7 +90,7 @@
                 {
 
                     echo '<div class="select">
-                            <select id="clgr" name="clgr" onchange="getSelectedValue();">
+                            <select id="clgr" name="clgr" onchange="getSelectedValue(); autocomplete="off"">
                                 <option value="" selected disabled>Client group</option> ';
 
                     while ($row = $res->fetch_assoc()) {
@@ -106,7 +106,7 @@
                 {
 
                     echo '<div class="select">
-                             <select id="istr" name="istr" onchange="getSelectedValue();">
+                             <select id="istr" name="istr" onchange="getSelectedValue(); autocomplete="off"">
                                 <option value="" selected disabled>Issues treated</option> ';
 
                     while ($row = $res->fetch_assoc()) {
@@ -122,7 +122,7 @@
                 {
 
                     echo '<div class="select">
-                             <select id="lan" name="lan" onchange="getSelectedValue();">
+                             <select id="lan" name="lan" onchange="getSelectedValue(); autocomplete="off"">
                                 <option value="" selected disabled>Language</option> ';
 
                     while ($row = $res->fetch_assoc()) {

@@ -13,6 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> 
     <link rel="stylesheet" href="css/main.css"> 
     <link href="https://allfont.net/allfont.css?fonts=league-spartan" rel="stylesheet" type="text/css" />
+    <script src="https://www.google.com/recaptcha/api.js?render=6LcPAnQcAAAAAN37iufYrO2ydZGvKeDzd3S0ji0T"></script>
 </head>
 <body>
     <img id="blog-banner" src="images/For Therapists.png">
@@ -90,11 +91,11 @@
         </div> 
            
     </div>
-
+    <div class="g-recaptcha" data-sitekey="6LejwLEcAAAAAFEh0mSzeXDZGDKMj60jilivv7Fq"></div>
     <div class="fp-form">
         <div class="fp-form-heading">Provide your information</div>
         <form action="" method="post" ng-app="myApp" ng-controller="validateCtrl" 
-        name="myForm" novalidate>
+        name="myForm" class="myFormFP" novalidate>
             <label for="name">
                 <span class="label">
                     Name<span class="required">*</span>
@@ -210,7 +211,7 @@
     </div>
 
 
-    <div id="footer" style="position: relative; z-index: 9;">
+    <div id="footer">
         <img src="images/footer.png" class="img-fluid" id="footerbanner" alt="...">  
     </div>
 
@@ -230,7 +231,8 @@
             </div>
             <div class="copyright">ALIGN © 2021</div>
         </footer>
-    </div>                      
+    </div>  
+    <script src="js/main.js"></script>                    
                             
 </body>
 </html>
